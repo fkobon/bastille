@@ -14,7 +14,7 @@ Template part for displaying articles in the Slider loop
 
 
 
-<li class="post-item">
+<section class="post-item">
     <?php the_post_thumbnail( 'slider-cover' , array('class'=>'responsive delay')); ?>
         <div class="large-4 small-10 medium-7 columns slider-caption post-item-caption">
             <div class="panel">
@@ -24,4 +24,4 @@ Template part for displaying articles in the Slider loop
             </div>
         </div>
     <div class="clearfix"></div>
-</li> 
+</section> 

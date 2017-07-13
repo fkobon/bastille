@@ -20,7 +20,7 @@ get_header(); ?>
                 <div class="columns large-12 category-header no-padding-left">
                     <div class="small-8 medium-6 large-6 columns left">
                         <h3 class="category-title">
-                        <?php echo bastille_get_programmes_label();?>
+                            <?php echo bastille_get_programmes_label();?>
                         </h3>
                     </div>
                     <div class="small-4 medium-6 large-6 columns category-title-line right"></div>

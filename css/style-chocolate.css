@@ -53,7 +53,7 @@ a:hover, a:focus {
 .panel h6 {
   line-height: 1;
   margin-bottom: 0.625rem;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   color: #5f3633;
   text-transform: uppercase;
   font-weight: normal; }
@@ -147,7 +147,7 @@ header div.logo img {
 .single-cover .title.center {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   padding: 1.6em 0px;
   display: block;
   font-weight: 300;
@@ -242,7 +242,7 @@ header div.logo img {
   color: #5f3633;
   padding: 0;
   position: relative;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 .top-bar .toggle-topbar.menu-icon a span::after {
   /*box-shadow: 0 0 0 1px $link-color, 0 7px 0 1px $link-color, 0 14px 0 1px $link-color;*/
@@ -256,7 +256,7 @@ header div.logo img {
   background: none; }
 
 .nav-wrapper nav ul li a {
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Roboto";
   text-transform: uppercase; }
 
 .nav-wrapper nav #home-link i {
@@ -675,12 +675,14 @@ meta.foundation-mq-topbar {
 8.0 - Slider
 ================================================================================================
 */
+/*
 .slider-wrapper {
-  width: 100%;
-  height: 100%;
-  min-height: 450px;
-  overflow: hidden; }
-
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    overflow: hidden;
+}
+*/
 @media only screen and (max-width: 65em) {
   .slider-wrapper {
     min-height: 280px;
@@ -701,6 +703,9 @@ meta.foundation-mq-topbar {
     min-height: 120px;
     max-height: 120px;
     overflow: hidden; } }
+.slider-wrapper .post-item {
+  position: relative; }
+
 .slider-wrapper .post-item > img {
   margin: 0;
   padding: 0;
@@ -708,44 +713,9 @@ meta.foundation-mq-topbar {
   width: 100%;
   border: 0; }
 
-.slider-wrapper .post-item {
-  height: 100%;
-  width: 100%; }
-
-.slider-wrapper .summary-wrapper {
-  position: relative;
-  height: 100%;
-  width: 100%; }
-
-.slider-wrapper .absolute {
-  position: absolute; }
-
-.slider-wrapper .summary-wrapper .button {
-  font-size: 1em;
-  margin-right: 20px;
-  font-family: "Montserrat", Helvetica, sans-serif; }
-
-.summary-wrapper .caption h1, .summary-wrapper .caption h3 {
-  font-family: "Montserrat", Helvetica, sans-serif;
-  text-shadow: 1px 1px 1px #212121;
-  text-transform: uppercase;
-  color: #FFF; }
-
-.summary-wrapper .caption h1 {
-  font-size: 3.5em; }
-
-.slider-wrapper .summary-wrapper .caption {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 30px; }
-
-.slider-wrapper .summary-wrapper .button:hover {
-  background: #000; }
-
 .slider-wrapper .slider-caption .post-item-date {
   font-size: 0.75em;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 .slider-wrapper .slider-caption {
   position: absolute;
@@ -767,7 +737,7 @@ meta.foundation-mq-topbar {
 .slider-wrapper .slider-caption .panel .post-item-title {
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 .slider-wrapper .slider-caption .button {
   text-transform: uppercase;
@@ -778,36 +748,6 @@ meta.foundation-mq-topbar {
 
 .slider-wrapper .slider-caption .panel .post-item-title a:hover {
   color: #5f3633; }
-
-.orbit-bullets {
-  display: block;
-  float: none;
-  margin: 0 auto 20px auto;
-  overflow: hidden;
-  position: absolute;
-  text-align: center;
-  top: 200px;
-  right: 4%;
-  width: 0.8rem;
-  line-height: 1.35em; }
-
-.orbit-bullets li {
-  background: rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  display: inline-block;
-  float: none;
-  height: 0.8rem;
-  margin-right: 6px;
-  width: 0.8rem;
-  border-radius: 1000px;
-  border: solid 1px #e67648; }
-
-.orbit-bullets li.active {
-  background: #e67648;
-  border: none; }
-
-.orbit-container .orbit-timer {
-  display: none; }
 
 /*
 ================================================================================================
@@ -966,7 +906,7 @@ article .post-item-date {
   margin-bottom: 10px; }
 
 .single-row article.post-item .post-item-title {
-  font-family: "Montserrat", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 2.5rem;
   padding-bottom: 5px;
@@ -992,7 +932,7 @@ article .panel .button:focus,
   color: #FFFFFF; }
 
 article.post-item .post-item-title {
-  font-family: "Montserrat", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1.3rem;
   font-weight: 300; }
@@ -1042,7 +982,7 @@ article .panel {
   margin-bottom: 10px; }
 
 .category-title {
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   color: #e67648;
   text-transform: uppercase;
   padding: 0px;
@@ -1123,7 +1063,7 @@ article.columns + article.columns:last-child {
 
 .event-widget .day, .event-widget .full-day, .event-widget .month {
   text-transform: capitalize;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   line-height: 0.6em; }
 
 .event-widget .day {
@@ -1177,7 +1117,7 @@ aside .row.widget {
 
 aside .widget-title {
   color: #FFF;
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   text-transform: uppercase;
   display: block;
   margin-bottom: 15px;
@@ -1332,7 +1272,7 @@ footer#footer .footer-bar {
   background-color: #020d16; }
 
 footer#footer .footer-bar .widget-title {
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   text-transform: uppercase;
   border-bottom: solid 1px;
   padding-bottom: 20px;
@@ -1373,7 +1313,7 @@ footer#footer a#back-to-top {
 */
 .button, button {
   background-color: #5f3633;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 button.small, .button.small {
   padding: 0.65rem 1.5rem 0.65rem 1.5rem;
@@ -1387,7 +1327,7 @@ article .panel .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Montserrat", Helvetica, sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 0.8rem;
@@ -1450,7 +1390,7 @@ table thead tr th {
   background-color: #5f3633;
   color: white;
   text-transform: uppercase;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 /*
 ================================================================================================
@@ -1467,7 +1407,7 @@ table thead tr th {
   float: left; }
 
 .page-numbers, .nav-links div {
-  font-family: "Montserrat", Helvetica, sans-serif;
+  font-family: "Playfair Display", Helvetica, sans-serif;
   display: inline-block;
   padding: 5px 10px;
   margin: 0 2px 0 0;
@@ -1495,7 +1435,7 @@ ul.pagination li.current button {
 
 ul.pagination li a, ul.pagination li {
   font-size: 1em;
-  font-family: "Montserrat", Helvetica, sans-serif; }
+  font-family: "Playfair Display", Helvetica, sans-serif; }
 
 ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
   background: #020d16; }

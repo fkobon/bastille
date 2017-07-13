@@ -21,23 +21,26 @@ The slider containing the carousel animation
                          ); 
     $sliders = get_posts( $args );
     if($sliders):?>
-        <section id="slider" class="row">
-        <ul class="slider-orbit slider-wrapper" data-orbit
-            data-options="animation:fade;
-            pause_on_hover:false;
-            animation_speed:500;
-            navigation_arrows:false;
-            timer_speed:4000;
-            timer:true;
-            bullets:true;
-            slide_number:false;"
-            >
-
-                <?php
-                foreach ( $sliders  as $post )  : setup_postdata( $post );
-                    get_template_part('template-parts/content','slide');
-                endforeach; ?>
-        </ul>
+        <section id="slider" class="row slider-wrapper">
+            <?php
+            foreach ( $sliders  as $post )  : setup_postdata( $post );
+                get_template_part('template-parts/content','slide');
+            endforeach; ?>
         </section>
     <?php endif; wp_reset_postdata(); $sliders = null;?>
-    
+
+    <!-- Javascript setting for the slider -->
+    <script>
+        jQuery(document).ready(function ($) {
+            // Initialize Homepage slider
+            $(document).ready(function(){
+                $('#slider').slick({
+                  dots: true,
+                  infinite: true,
+                  speed: 300,
+                  slidesToShow: 1,
+                  adaptiveHeight: true
+                });
+            });
+        });
+    </script>
