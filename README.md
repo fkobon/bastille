@@ -1,7 +1,8 @@
 # Bastille
 A modern modern theme for news websites.
 
-[![bastille_screenshot.png](https://s6.postimg.org/fcjb55bvl/bastille_screenshot.png)](https://postimg.org/image/pzd4akk0t/)
+[![bastille_homepage_yellow.png](https://s6.postimg.org/dhc5anyzl/bastille_homepage_yellow.png)](https://postimg.org/image/3wsins9nh/)
+
 ## Description
 Bastille is a clean, simple, and fully responsive WordPress theme for webzines. Its name, from French origins, refer to the Storming of the Bastille on 14 July 1789, but more importantly to 14 july, birthday of the author :). 
 It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using [Zurb Foundation](https://github.com/zurb/foundation-sites), a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Bastille is available in English, French, and Spanish for now.
@@ -43,9 +44,9 @@ This theme has loads of customization options available. To open WordPress Custo
 Change the header image. It might support a random image list.
 
 #### Colors
- Bastille comes with six flavors: blue, green, red, orange, yellow, and chocolate. You might switch between these colors using the Customizer.
-[![showcase_bastille_theme_wordpress.png](https://s6.postimg.org/9045vb8td/showcase_bastille_theme_wordpress.png)](https://postimg.org/image/y65425a3h/)
-
+ Bastille comes with six flavors: blue, green, red, orange, yellow, and pink. You might switch between these colors using the Customizer.
+ 
+ [![showcase_bastille_theme.jpg](https://s6.postimg.org/faf1yzk69/showcase_bastille_theme.jpg)](https://postimg.org/image/xd84q7g0t/)
 
 ## File structure
 In this theme we are using a default [WordPress template hierarchy](http://codex.wordpress.org/Template_Hierarchy).
