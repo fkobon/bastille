@@ -10,6 +10,8 @@ Template part for displaying the first bloc, two articles at a time
 @author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
+$category_id = esc_attr( get_theme_mod( 'bloc_1_category' ));
+if($category_id>0): //make sure a category has been selected
 ?>
 <section class="row main-row clearfix">
             <section class="large-8 columns main-column">
@@ -17,22 +19,21 @@ Template part for displaying the first bloc, two articles at a time
                     <div class="columns large-12 category-header no-padding">
                         <div class="small-8 medium-6 large-6 columns no-padding-left">
                             <h4 class="category-title">
-                                <?php echo 'Fashion';?>
+                                <?php echo esc_attr( get_theme_mod( 'bloc_1_label' ));?>
                             </h4>
                         </div>
                         <div class="small-4 medium-6 large-6 columns right no-padding">
-                            <a href="<?php //the_permalink(bastille_get_programmes_page());?>#" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
+                            <a href="<?php echo get_category_link(esc_attr( get_theme_mod( 'bloc_1_category' )));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
                         </div>
                     </div><!--header/-->
                 </div><!--header/-->
                 <div class="category-row">
                     <!-- post list-->
                     <div class="post-list clearfix">
-                        <?php //starting programmes loop;
-
+                        <?php //starting Bloc 1 loop;
                         $i = 1;	$args = array ('post_type'=>'post',
-                                               'showposts'=>2,
-                                               /*'category'=>$cat_ID;*/
+                                               'showposts'=>esc_attr( get_theme_mod( 'bloc_1_number' )),
+                                               'cat'=> $category_id
                                               ); 
                         $programmes = new WP_Query($args);                    
                         if($programmes->have_posts() ) :
@@ -48,3 +49,4 @@ Template part for displaying the first bloc, two articles at a time
                 <?php dynamic_sidebar( 'sidebar-home' ); ?>
             </aside>
 </section>
+<?php endif;$category_id = 0;

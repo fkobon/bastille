@@ -10,17 +10,19 @@ Template part for displaying the third bloc, 3 to 9 articles at a time
 @author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
+$category_id = esc_attr( get_theme_mod( 'bloc_3_category' ));
+if($category_id>0): //make sure a category has been selected
 ?>
 <section class="row main-row clearfix bloc-3">
         <div class="main-row no-margin-top no-padding-top no-margin-top" >
             <div class="columns large-12 category-header no-padding">
                 <div class="small-8 medium-6 large-6 columns no-padding-left">
                     <h4 class="category-title">
-                        <?php echo 'Technology';?>
+                        <?php echo esc_attr( get_theme_mod( 'bloc_3_label' ));?>
                     </h4>
                 </div>
                 <div class="small-4 medium-6 large-6 columns right no-padding">
-                    <a href="<?php //the_permalink(bastille_get_programmes_page());?>#" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
+                    <a href="<?php echo get_category_link(esc_attr( get_theme_mod( 'bloc_3_category' )));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
                 </div>
             </div><!--header/-->
         </div><!--header/-->
@@ -29,8 +31,8 @@ Template part for displaying the third bloc, 3 to 9 articles at a time
             <div class="post-list clearfix">
                 <?php //starting programmes loop;
                 $i = 1;	$args = array ('post_type'=>'post',
-                                       'showposts'=>3,
-                                       /*'category'=>$cat_ID;*/
+                                       'showposts'=>esc_attr( get_theme_mod( 'bloc_3_number' )),
+                                       'cat'=>$category_id
                                       ); 
                 $programmes = new WP_Query($args);                    
                 if($programmes->have_posts() ) :
@@ -41,3 +43,4 @@ Template part for displaying the third bloc, 3 to 9 articles at a time
             </div>
         </div>
 </section>
+<?php endif;$category_id = 0;

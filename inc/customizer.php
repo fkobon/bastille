@@ -61,14 +61,14 @@ function bastille_customize_register( $wp_customize ) {
     
     // Bloc 1 category selector
     $wp_customize->add_setting('bloc_1_category', array(
-		'default' => 1,
+		'default' => 0,
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
 	));
     $wp_customize->add_control(
         new Category_Dropdown_Custom_Control(
-            $wp_customize, 'bastille_theme_color', array(
+            $wp_customize, 'bloc_1_category', array(
                 'label' => __( 'Bloc 1 category', 'bastille' ),
                 'section' => 'bastille_bloc_1_section',
                 'settings' => 'bloc_1_category',
@@ -96,7 +96,7 @@ function bastille_customize_register( $wp_customize ) {
     
     // Section 1 post number
     $wp_customize->add_setting('bloc_1_number', array(
-		'default' => __(2, 'bastille'),
+		'default' => 2, 'bastille',
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -109,7 +109,9 @@ function bastille_customize_register( $wp_customize ) {
 			'section' => 'bastille_bloc_1_section',
 			'settings' => 'bloc_1_number',
 			'type'     => 'select',
-            'choices'  => array(2,3,4,5,6,7,8,9,10)
+            'choices'  => array('2'=>2,
+                                '4'=>4,
+                                '6'=>6)
 		)
 	));
     
@@ -126,7 +128,7 @@ function bastille_customize_register( $wp_customize ) {
 
     // Bloc 2 category selector
     $wp_customize->add_setting('bloc_2_category', array(
-        'default' => 1,
+        'default' => 0,
         'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -142,7 +144,7 @@ function bastille_customize_register( $wp_customize ) {
     
     // Bloc 2 category selector
     $wp_customize->add_setting('bloc_2_category', array(
-        'default' => 1,
+        'default' => 0,
         'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -188,7 +190,7 @@ function bastille_customize_register( $wp_customize ) {
     
     // Bloc 3 category selector
     $wp_customize->add_setting('bloc_3_category', array(
-		'default' => 1,
+		'default' => 0,
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -205,7 +207,7 @@ function bastille_customize_register( $wp_customize ) {
     
      // Bloc 3 label
     $wp_customize->add_setting('bloc_3_label', array(
-		'default' => __('Section 1', 'bastille'),
+		'default' => __('Section 3', 'bastille'),
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'sanitize_text_field'
 
@@ -223,7 +225,7 @@ function bastille_customize_register( $wp_customize ) {
     
     // Bloc 3 post number
     $wp_customize->add_setting('bloc_3_number', array(
-		'default' => __(3, 'bastille'),
+		'default' => 3,
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
@@ -236,7 +238,9 @@ function bastille_customize_register( $wp_customize ) {
 			'section' => 'bastille_bloc_3_section',
 			'settings' => 'bloc_3_number',
 			'type'     => 'select',
-            'choices'  => array(2,3,4,5,6,7,8,9,10)
+            'choices'  => array('3'=>3,
+                                '6'=>6,
+                                '9'=>9)
 		)
 	));
 }
