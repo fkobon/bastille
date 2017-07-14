@@ -16,11 +16,17 @@ Template part for displaying articles in the Slider loop
 
 <section class="post-item">
     <?php the_post_thumbnail( 'slider-cover' , array('class'=>'responsive delay')); ?>
-        <div class="large-4 small-10 medium-7 columns slider-caption post-item-caption">
+        <div class="large-6 small-10 medium-7 columns slider-caption post-item-caption">
             <div class="panel">
+                <span class="label category">
+                    <?php $categories = get_the_category(); 
+                        if ( ! empty( $categories ) ){
+                            echo esc_html( $categories[0]->name );   
+                        }
+                    ?>
+                </span>
+                <h1 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
                 <span class="post-item-date"><?php echo get_the_date('d/m/Y')?></span>
-                <h3 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
-                <p><?php bastille_new_excerpt_length(140,' [...]');?></p> <a href="<?php the_permalink();?>" class="small button post-item-buttom radius"><?php _e('Read more','bastille')?></a>
             </div>
         </div>
     <div class="clearfix"></div>

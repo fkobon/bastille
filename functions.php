@@ -89,6 +89,16 @@ function bastille_widgets_init() {
 		'before_title'  => '<h5 class="widget-title">',
 		'after_title'   => '</h5>',
 	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Banner top', 'bastille' ),
+		'id'            => 'banner-top',
+		'description'   => esc_html__( 'Add the top banner ici.', 'bastille' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
 }
 add_action( 'widgets_init', 'bastille_widgets_init' );
 
@@ -99,7 +109,7 @@ add_action( 'widgets_init', 'bastille_widgets_init' );
 function bastille_scripts() {
     
     // Google fonts
-    wp_enqueue_style( 'bastille-google-fonts', 'http://fonts.googleapis.com/css?family=Lora|Roboto:400,700|Playfair+Display:700', false ); 
+    wp_enqueue_style( 'bastille-google-fonts', 'http://fonts.googleapis.com/css?family=Lora|Roboto:500|Playfair+Display:700', false ); 
 
 
     // CSS

@@ -53,7 +53,7 @@ a:hover, a:focus {
 .panel h6 {
   line-height: 1;
   margin-bottom: 0.625rem;
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   color: #e34a00;
   text-transform: uppercase;
   font-weight: normal; }
@@ -108,7 +108,7 @@ section.fixed-header {
   /* position:fixed;*/
   z-index: 100;
   width: 100%;
-  padding: 25px 20px 15px 20px; }
+  padding: 25px 20px 0px 20px; }
 
 header div.logo {
   padding: 0px;
@@ -120,23 +120,6 @@ header div.slogan a {
 header div.slogan a:hover {
   color: #020d16; }
 
-header div.logo img {
-  /*
-  max-height: 120px;
-  filter: brightness(200%);
-      -webkit-filter: brightness(200%);
-      -moz-filter: brightness(0%);
-      -o-filter: brightness(0%);
-      -ms-filter: brightness(0%);
-  */
-  /*
-  filter: hue-rotate(180deg);
-      -webkit-filter: hue-rotate(180deg);
-      -moz-filter: hue-rotate(180deg);
-      -o-filter: hue-rotate(180deg);
-      -ms-filter: hue-rotate(180deg);
-  */ }
-
 .single-cover .overlay {
   background: rgba(227, 74, 0, 0.85);
   height: 100%;
@@ -147,12 +130,49 @@ header div.logo img {
 .single-cover .title.center {
   text-align: center;
   text-transform: uppercase;
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   padding: 1.6em 0px;
   display: block;
   font-weight: 300;
   text-transform: uppercase;
   color: #FFF; }
+
+header .site-title {
+  font-family: "Playfair Display", "Georgia", sans-serif;
+  font-size: 4.5em;
+  padding: 0;
+  margin: 0;
+  line-height: 1.020em; }
+
+header .banner-top img {
+  max-height: 90px;
+  width: auto; }
+
+header .banner-top .widget-title {
+  display: none; }
+
+header .search-form input {
+  border: none;
+  border-bottom: solid 1px #e34a00;
+  box-shadow: none;
+  margin: 0; }
+
+header .search-form .button, header .search-form button {
+  background-color: transparent;
+  color: #e34a00;
+  padding: 5px;
+  font-size: 1.15rem;
+  margin: 0; }
+
+header .search-form button:hover, header .search-form button:focus, header .search-form .button:hover, header .search-form .button:focus {
+  color: #e34a00;
+  background-color: transparent; }
+
+header .search-form .small-2 {
+  width: 10%; }
+
+header .search-form .small-10 {
+  width: 90%; }
 
 /*
 ================================================================================================
@@ -220,12 +240,6 @@ header div.logo img {
 .top-bar .toggle-topbar.menu-icon {
   top: 0%; }
 
-.main-nav > li {
-  border-left: 1px solid #f5f5f5;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  transition: all .2s; }
-
 .main-nav li:first-child {
   border-left: none; }
 
@@ -242,7 +256,7 @@ header div.logo img {
   color: #e34a00;
   padding: 0;
   position: relative;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 .top-bar .toggle-topbar.menu-icon a span::after {
   /*box-shadow: 0 0 0 1px $link-color, 0 7px 0 1px $link-color, 0 14px 0 1px $link-color;*/
@@ -394,15 +408,16 @@ header .socials {
 .nav-wrapper nav.top-bar li.current-menu-item,
 .nav-wrapper nav.top-bar li.current-menu-ancestor,
 .nav-wrapper nav.top-bar li.current-menu-parent {
-  background: #e34a00; }
+  /* border-bottom:solid 1px $link-color; */ }
 
 .nav-wrapper nav.top-bar li.current-menu-item a,
 .nav-wrapper nav.top-bar li.current-menu-ancestor a,
 .nav-wrapper nav.top-bar li.current-menu-parent a {
-  color: #FFF; }
+  color: #e34a00;
+  font-weight: bold; }
 
 .top-bar-section .current-menu-item.has-dropdown > a::after, .top-bar-section .current-menu-ancestor.has-dropdown > a::after, .top-bar-section .current-menu-parent.has-dropdown > a::after {
-  color: #FFF;
+  color: #e34a00;
   content: '\f078';
   line-height: 1px;
   font-size: 0.7em; }
@@ -506,7 +521,7 @@ meta.foundation-mq-topbar {
 
   .top-bar-section li:not(.has-form) a:not(.button) {
     line-height: 2.8125rem;
-    padding: 2px 0.98rem; }
+    padding: 0px 0.98rem; }
 
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     /*! background-color: #555555; */
@@ -675,14 +690,6 @@ meta.foundation-mq-topbar {
 8.0 - Slider
 ================================================================================================
 */
-/*
-.slider-wrapper {
-    width: 100%;
-    height: 100%;
-    min-height: 450px;
-    overflow: hidden;
-}
-*/
 @media only screen and (max-width: 65em) {
   .slider-wrapper {
     min-height: 280px;
@@ -704,6 +711,7 @@ meta.foundation-mq-topbar {
     max-height: 120px;
     overflow: hidden; } }
 .slider-wrapper .post-item {
+  background: #000;
   position: relative; }
 
 .slider-wrapper .post-item > img {
@@ -711,22 +719,29 @@ meta.foundation-mq-topbar {
   padding: 0;
   display: block;
   width: 100%;
-  border: 0; }
+  border: 0;
+  opacity: .5; }
+
+.slider-wrapper .slider-caption .label.category {
+  background-color: #e34a00;
+  margin-bottom: 40px;
+  color: #e34a00;
+  padding: 4px 18px; }
 
 .slider-wrapper .slider-caption .post-item-date {
   font-size: 0.75em;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
+  font-family: "Playfair Display", "Georgia", sans-serif;
+  color: #FFF; }
 
 .slider-wrapper .slider-caption {
   position: absolute;
-  padding: 0px;
-  top: 15%;
-  left: 4%; }
+  padding: 20px;
+  top: 20px; }
 
 .slider-wrapper .panel {
   border: none;
   background: none;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: none; }
 
 .slider-wrapper .panel p {
   font-size: 0.9rem;
@@ -737,16 +752,43 @@ meta.foundation-mq-topbar {
 .slider-wrapper .slider-caption .panel .post-item-title {
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
-
-.slider-wrapper .slider-caption .button {
-  text-transform: uppercase;
-  font-size: 0.7rem; }
+  font-family: "Playfair Display", "Georgia", sans-serif;
+  text-transform: capitalize; }
 
 .slider-wrapper .slider-caption .panel .post-item-title a {
-  color: #e34a00; }
+  color: #FFF; }
 
 .slider-wrapper .slider-caption .panel .post-item-title a:hover {
+  color: #e34a00; }
+
+.main-row.slider-controllers {
+  margin-top: -85px; }
+
+.slider-controllers .controller-title {
+  padding: 8px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: "Playfair Display", "Georgia", sans-serif;
+  min-height: 80px;
+  margin-right: 15px; }
+
+.slider-controllers .controller-title a {
+  color: #FFF;
+  font-weight: bold; }
+
+.slider-controllers .slick-current, .slider-controllers .controller-title:hover {
+  background: rgba(227, 74, 0, 0.3);
+  border-bottom: solid 3px #e34a00; }
+
+.slider-controllers .slick-current a, .slider-controllers .controller-title a:hover {
+  color: #FFF; }
+
+.slick-prev, .slick-next {
+  background: transparent;
+  border: 1px solid #e34a00;
+  border-radius: 30px;
+  background: transparent; }
+
+.slick-prev::before, .slick-next::before {
   color: #e34a00; }
 
 /*
@@ -906,7 +948,7 @@ article .post-item-date {
   margin-bottom: 10px; }
 
 .single-row article.post-item .post-item-title {
-  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 2.5rem;
   padding-bottom: 5px;
@@ -932,7 +974,7 @@ article .panel .button:focus,
   color: #FFFFFF; }
 
 article.post-item .post-item-title {
-  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1.3rem;
   font-weight: 300; }
@@ -982,7 +1024,7 @@ article .panel {
   margin-bottom: 10px; }
 
 .category-title {
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   color: #e34a00;
   text-transform: uppercase;
   padding: 0px;
@@ -1063,7 +1105,7 @@ article.columns + article.columns:last-child {
 
 .event-widget .day, .event-widget .full-day, .event-widget .month {
   text-transform: capitalize;
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   line-height: 0.6em; }
 
 .event-widget .day {
@@ -1117,7 +1159,7 @@ aside .row.widget {
 
 aside .widget-title {
   color: #FFF;
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   text-transform: uppercase;
   display: block;
   margin-bottom: 15px;
@@ -1272,7 +1314,7 @@ footer#footer .footer-bar {
   background-color: #020d16; }
 
 footer#footer .footer-bar .widget-title {
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   text-transform: uppercase;
   border-bottom: solid 1px;
   padding-bottom: 20px;
@@ -1313,7 +1355,7 @@ footer#footer a#back-to-top {
 */
 .button, button {
   background-color: #e34a00;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 button.small, .button.small {
   padding: 0.65rem 1.5rem 0.65rem 1.5rem;
@@ -1327,7 +1369,7 @@ article .panel .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Playfair Display", Helvetica, sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif, Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 0.8rem;
@@ -1390,7 +1432,7 @@ table thead tr th {
   background-color: #e34a00;
   color: white;
   text-transform: uppercase;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 /*
 ================================================================================================
@@ -1407,7 +1449,7 @@ table thead tr th {
   float: left; }
 
 .page-numbers, .nav-links div {
-  font-family: "Playfair Display", Helvetica, sans-serif;
+  font-family: "Playfair Display", "Georgia", sans-serif;
   display: inline-block;
   padding: 5px 10px;
   margin: 0 2px 0 0;
@@ -1435,7 +1477,7 @@ ul.pagination li.current button {
 
 ul.pagination li a, ul.pagination li {
   font-size: 1em;
-  font-family: "Playfair Display", Helvetica, sans-serif; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 ul.pagination li.current a:hover, ul.pagination li.current a:focus, ul.pagination li.current button:hover, ul.pagination li.current button:focus {
   background: #020d16; }
@@ -1506,8 +1548,8 @@ footer .breadcrumbs > *::before {
   .top-bar .toggle-topbar.menu-icon a {
     font-size: 1.2em; }
 
-  .orbit-bullets {
-    top: 30%; }
+  slider-wrapper .slider-caption .label.category {
+    margin-bottom: 30px; }
 
   .slider-wrapper .panel p, .slider-wrapper .post-item-date {
     display: none; }
@@ -1655,9 +1697,6 @@ footer .breadcrumbs > *::before {
   .slider-wrapper .slider-caption .panel .post-item-title {
     font-size: 1em; }
 
-  .orbit-bullets {
-    top: 10%; }
-
   .top-bar .toggle-topbar.menu-icon a span::after {
     font-size: 1.5em; } }
 /*
@@ -1759,6 +1798,18 @@ article.comment-wrapper {
 26.0 - Miscelleanous (Test and hacks sizes)
 ================================================================================================
 */
+.height-10 {
+  min-height: 10px; }
+
+.height-15 {
+  min-height: 15px; }
+
+.height-20 {
+  min-height: 20px; }
+
+.height-30 {
+  min-height: 30px; }
+
 .height-100 {
   min-height: 100px; }
 
@@ -1767,9 +1818,6 @@ article.comment-wrapper {
 
 .height-50 {
   min-height: 50px; }
-
-.height-30 {
-  min-height: 30px; }
 
 .height-200 {
   min-height: 200px; }

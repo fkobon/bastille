@@ -17,7 +17,7 @@ The template for displaying the menu. It contains the menu items
                  </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
-        <section class="top-bar-section">
+        <section class="top-bar-section left">
             <?php
                 /* Primary menu */
                 if(function_exists('wp_nav_menu')) {

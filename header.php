@@ -35,27 +35,28 @@ and everything up until <div id="content">
             <header class="background-white">
                 <div class="row clearfix">
                     <?php if(has_custom_logo()):?>
-                    <div class="small-6 large-2 medium-3 large-uncentered columns logo">
+                    <div class="small-12 large-5 medium-5 large-uncentered small-centered columns logo">
                         <a href="<?php echo site_url(); ?>">  
                             <?php the_custom_logo();?>
                         </a>
                     </div>
                     <?php else:?>
-                    <div class="small-3 large-2 medium-12 large-uncentered columns">
+                    <div class="small-12 large-5 medium-5 large-uncentered columns small-centered">
                         <h2 class="site-title">
                             <a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
                         </h2>
                     </div>
                     <?php endif;?>
-                    <div class="socials small-2 large-1 medium-6 columns socials medium-uncentered small-centered large-uncentered right">
-                        <ul class="right">
-                            <?php get_template_part('menu', 'social'); ?>
-                        </ul>
-
-                    </div><!--socials/-->
-                    <div class="nav-wrapper large-9 medium-12 columns left">
+                    <div class="nav-wrapper large-7 medium-7 banner-top columns">
+                        <?php dynamic_sidebar( 'banner-top' ); ?>
+                    </div><!--/advertising banner-->  
+                    <div class="clearfix height-10"></div>
+                    <div class="nav-wrapper large-9 medium-8 small-2 columns left">
                         <?php get_template_part('menu'); ?>
                     </div><!--/nav-wrapper-->   
+                    <div class="large-3 medium-4 small-3 columns right">
+                        <?php get_search_form(); ?>
+                    </div><!--/search-form-->   
                 </div>
             </header>
         </section>
