@@ -12,7 +12,7 @@ Template part for displaying articles in loop
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class();?>>
+<article id="post-<?php the_ID(); ?>" class="post-item large-6 medium-6 columns">
     <!--post/-->
     <div class="post-item-caption">        
         <div class="panel">

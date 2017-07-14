@@ -32,23 +32,6 @@ function bastille_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'bastille_body_classes' );
 
-
-/**
- * Add the appropriate class to post-item in the loop
- */
-function bastille_post_item_class() {
-    
-	if ( is_front_page() || is_home()) {
-		$classes[] = 'post-item large-6 medium-6 columns';
-	}elseif(is_singular() && !is_singular('page')) {
-        $classes[] = 'post-item ';
-        
-    }else {
-        $classes[] = 'post-item large-6 medium-6 columns';
-    }
-    return $classes;
-}
-add_filter( 'post_class', 'bastille_post_item_class' );
 add_action( 'wp_head', 'bastille_pingback_header' );
 
 

@@ -13,16 +13,13 @@ after and containing the bottom widget area
 */
 ?>
     <footer id="footer">
+        <div class="footer-bar parallax clearfix">
+                <?php dynamic_sidebar( 'footer-1' );?>
+        </div><!-- .footer-bar -->
         <div class="row">
                 <div class="medium-6 large-6 columns">
                     <p class="copyright"><?php _e('Developed by ','bastille')?>Samuel Guebo.<br><a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bastille' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bastille' ), 'WordPress' ); ?></a> <?php _e('and available on','bastille')?> <a href="https://github.com/samuelguebo/bastille"><i class="fa fa-github"></i> Github</a>
                     </p><!-- copyright-->
-                </div>
-                <div class="medium-4 large-4 columns">
-                        <?php get_search_form(); ?>
-                </div>
-                <div class="medium-2 large-2 columns socials right">
-                        <?php get_template_part('menu', 'social'); ?>
                 </div>
         </div>
         <div class="row back-to-top-wrapper">

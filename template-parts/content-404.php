@@ -11,7 +11,7 @@ Template part for displaying 404 error message
 ================================================================================================
 */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class();?>>
+<article id="post-<?php the_ID(); ?>" class="post-item">
     <!--post/-->
     <br>
     <div class="post-item-caption">

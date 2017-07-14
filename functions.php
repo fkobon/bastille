@@ -45,9 +45,10 @@ function bastille_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-    add_image_size( 'post-thumb', 370,260, array( 'left', 'top' ) );
-    add_image_size( 'single-thumb', 770,330, array( 'left', 'top' ) );
-    add_image_size( 'slider-cover', 1100,450, array( 'left', 'top' ) );
+    add_image_size( 'post-thumb', 370,210, array( 'center', 'top' ) );
+    add_image_size( 'post-mix-thumb', 680,415, array( 'center', 'top' ) );
+    add_image_size( 'single-thumb', 770,330, array( 'center', 'top' ) );
+    add_image_size( 'slider-cover', 1100,450, array( 'center', 'top' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -81,6 +82,26 @@ add_action( 'after_setup_theme', 'bastille_setup' );
  */
 function bastille_widgets_init() {
     register_sidebar( array(
+		'name'          => esc_html__( 'Home sidebar', 'bastille' ),
+		'id'            => 'sidebar-home',
+		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Single sidebar', 'bastille' ),
+		'id'            => 'sidebar-single',
+		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+    
+    register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'bastille' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
@@ -96,6 +117,16 @@ function bastille_widgets_init() {
 		'description'   => esc_html__( 'Add the top banner ici.', 'bastille' ),
 		'before_widget' => '',
 		'after_widget'  => '',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+    
+    register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'bastille' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s large-4 small-up-4 columns widget left">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h5 class="widget-title">',
 		'after_title'   => '</h5>',
 	) );

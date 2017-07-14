@@ -32,22 +32,22 @@ and everything up until <div id="content">
 <body <?php body_class(); ?>>
     <section id ="boxed-wrapper">
         <section class= "fixed-header">
-            <header class="background-white">
+            <header class="background-white main-row">
                 <div class="row clearfix">
                     <?php if(has_custom_logo()):?>
-                    <div class="small-12 large-5 medium-5 large-uncentered small-centered columns logo">
+                    <div class="small-12 large-4 medium-4 large-uncentered small-centered columns logo">
                         <a href="<?php echo site_url(); ?>">  
                             <?php the_custom_logo();?>
                         </a>
                     </div>
                     <?php else:?>
-                    <div class="small-12 large-5 medium-5 large-uncentered columns small-centered">
+                    <div class="small-12 large-4 medium-4 large-uncentered columns small-centered">
                         <h2 class="site-title">
                             <a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
                         </h2>
                     </div>
                     <?php endif;?>
-                    <div class="nav-wrapper large-7 medium-7 banner-top columns">
+                    <div class="nav-wrapper large-8 medium-8 banner-top columns">
                         <?php dynamic_sidebar( 'banner-top' ); ?>
                     </div><!--/advertising banner-->  
                     <div class="clearfix height-10"></div>
