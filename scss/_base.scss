@@ -492,6 +492,12 @@ header .socials {
     font-weight: bold;
 }
 
+.nav-wrapper nav.top-bar li.current-menu-item a:hover,
+.nav-wrapper nav.top-bar li.current-menu-ancestor a:hover,
+.nav-wrapper nav.top-bar li.current-menu-parent a:hover
+{
+    color: $secondary-color;
+}
 .top-bar-section .current-menu-item.has-dropdown > a::after, .top-bar-section .current-menu-ancestor.has-dropdown > a::after, .top-bar-section .current-menu-parent.has-dropdown > a::after {
     color: $secondary-color;
     content: '\f078';

@@ -108,7 +108,7 @@ section.fixed-header {
   /* position:fixed;*/
   z-index: 100;
   width: 100%;
-  padding: 10px 20px 0px 20px; }
+  padding: 5px 20px 0px 20px; }
 
 header div.logo {
   padding: 0px;
@@ -419,6 +419,11 @@ header .socials {
 .nav-wrapper nav.top-bar li.current-menu-parent a {
   color: #e34a00;
   font-weight: bold; }
+
+.nav-wrapper nav.top-bar li.current-menu-item a:hover,
+.nav-wrapper nav.top-bar li.current-menu-ancestor a:hover,
+.nav-wrapper nav.top-bar li.current-menu-parent a:hover {
+  color: #e34a00; }
 
 .top-bar-section .current-menu-item.has-dropdown > a::after, .top-bar-section .current-menu-ancestor.has-dropdown > a::after, .top-bar-section .current-menu-parent.has-dropdown > a::after {
   color: #e34a00;

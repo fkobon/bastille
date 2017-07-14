@@ -75,7 +75,7 @@ class Palette_Custom_Control extends WP_Customize_Control
                     </h1>
                   <div id="palette">
                       <a class="green" href="#">
-                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="" />
+                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="green" />
                     </a>
                     <a class="blue" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="blue" />
@@ -90,7 +90,7 @@ class Palette_Custom_Control extends WP_Customize_Control
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="red" />
                     </a>
                     <a class="yellow" href="#">
-                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> value="yellow" />
+                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> value="" />
                     </a>
                   </div>
                 </label>

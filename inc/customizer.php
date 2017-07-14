@@ -25,6 +25,7 @@ function bastille_customize_register( $wp_customize ) {
      *
      */
     require_once dirname(__FILE__) . '/class-palette_custom_control.php';
+    require_once dirname(__FILE__) . '/class-category_dropdown_custom_control.php';
     
     $wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
     $wp_customize->add_setting(
@@ -45,100 +46,202 @@ function bastille_customize_register( $wp_customize ) {
             )
         );    
     
-     /*
-      * Events
-      *
-      */
+     
     
-    // Create sections for Events settings
-    $wp_customize->add_section('bastille_events_section', array(
-		'title' => __('Events', 'bastille'),
+    /*
+     * Bloc 1
+     *
+     */
+    
+    // Create section for Bloc 1 settings
+    $wp_customize->add_section('bastille_bloc_1_section', array(
+		'title' => __('Bloc 1', 'bastille'),
 		'priority' => 30,
 	));
     
-    // Events page selector
-    $wp_customize->add_setting('events_page', array(
-		'default' => '#',
+    // Bloc 1 category selector
+    $wp_customize->add_setting('bloc_1_category', array(
+		'default' => 1,
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'events_page',
-		array(
-			'label' => __('Set what page must be used for listing the events.', 'bastille'),
-			'section' => 'bastille_events_section',
-			'settings' => 'events_page',
-			'type' => 'dropdown-pages',
-		)
-	));
+    $wp_customize->add_control(
+        new Category_Dropdown_Custom_Control(
+            $wp_customize, 'bastille_theme_color', array(
+                'label' => __( 'Bloc 1 category', 'bastille' ),
+                'section' => 'bastille_bloc_1_section',
+                'settings' => 'bloc_1_category',
+            )
+    ));
     
-     // Events label
-    $wp_customize->add_setting('events_label', array(
-		'default' => __('Events', 'bastille'),
+    
+     // Section 1 label
+    $wp_customize->add_setting('bloc_1_label', array(
+		'default' => __('Section 1', 'bastille'),
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'events_label',
+		'bloc_1_label',
 		array(
-			'label' => __('Label for the Events section on homepage', 'bastille'),
-			'section' => 'bastille_events_section',
-			'settings' => 'events_label',
+			'label' => __('Display text for bloc 1', 'bastille'),
+			'section' => 'bastille_bloc_1_section',
+			'settings' => 'bloc_1_label',
 			'type' => 'text',
+		)
+	));
+    
+    // Section 1 post number
+    $wp_customize->add_setting('bloc_1_number', array(
+		'default' => __(2, 'bastille'),
+		'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+	));
+    $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'bloc_1_number',
+		array(
+			'label' => __('Number of posts to display in bloc 1', 'bastille'),
+			'section' => 'bastille_bloc_1_section',
+			'settings' => 'bloc_1_number',
+			'type'     => 'select',
+            'choices'  => array(2,3,4,5,6,7,8,9,10)
 		)
 	));
     
     /*
-     * Programmes
+     * Bloc 2
+     *
+     */
+
+    // Create section for Bloc 2 settings
+    $wp_customize->add_section('bastille_bloc_2_section', array(
+        'title' => __('Bloc 2', 'bastille'),
+        'priority' => 30,
+    ));
+
+    // Bloc 2 category selector
+    $wp_customize->add_setting('bloc_2_category', array(
+        'default' => 1,
+        'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+    ));
+    $wp_customize->add_control(
+        new Category_Dropdown_Custom_Control(
+            $wp_customize, 'bastille_theme_color', array(
+                'label' => __( 'Bloc 2 category', 'bastille' ),
+                'section' => 'bastille_bloc_2_section',
+                'settings' => 'bloc_2_category',
+            )
+    ));
+    
+    // Bloc 2 category selector
+    $wp_customize->add_setting('bloc_2_category', array(
+        'default' => 1,
+        'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+    ));
+    $wp_customize->add_control(
+        new Category_Dropdown_Custom_Control(
+            $wp_customize, 'bloc_2_category', array(
+                'label' => __( 'Bloc 2 category', 'bastille' ),
+                'section' => 'bastille_bloc_2_section',
+                'settings' => 'bloc_2_category',
+            )
+    ));
+
+
+     // Bloc 2 label
+    $wp_customize->add_setting('bloc_2_label', array(
+        'default' => __('Bloc 2', 'bastille'),
+        'transport' => 'refresh',
+        'sanitize_callback'	=> 'sanitize_text_field'
+
+    ));
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'bloc_2_label',
+        array(
+            'label' => __('Display text for bloc 3', 'bastille'),
+            'section' => 'bastille_bloc_2_section',
+            'settings' => 'bloc_2_label',
+            'type' => 'text',
+        )
+    ));
+
+    /*
+     * Bloc 3
      *
      */
     
-    // Create sections for Programmes settings
-    $wp_customize->add_section('bastille_programmes_section', array(
-		'title' => __('Programmes', 'bastille'),
+    // Create section for Bloc 3 settings
+    $wp_customize->add_section('bastille_bloc_3_section', array(
+		'title' => __('Bloc 3', 'bastille'),
 		'priority' => 30,
 	));
     
-    // Programmes page selector
-    $wp_customize->add_setting('programmes_page', array(
-		'default' => '#',
+    // Bloc 3 category selector
+    $wp_customize->add_setting('bloc_3_category', array(
+		'default' => 1,
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'absint'
 
 	));
-    $wp_customize->add_control(new WP_Customize_Control(
-		$wp_customize,
-		'programmes_page',
-		array(
-			'label' => __('Set what page must be used for listing the programmes.', 'bastille'),
-			'section' => 'bastille_programmes_section',
-			'settings' => 'programmes_page',
-			'type' => 'dropdown-pages',
-		)
-	));
+    $wp_customize->add_control(
+        new Category_Dropdown_Custom_Control(
+            $wp_customize, 'bastille_theme_color', array(
+                'label' => __( 'Bloc 3 category', 'bastille' ),
+                'section' => 'bastille_bloc_3_section',
+                'settings' => 'bloc_3_category',
+            )
+    ));
     
-     // Programmes label
-    $wp_customize->add_setting('programmes_label', array(
-		'default' => __('Programmes', 'bastille'),
+    
+     // Bloc 3 label
+    $wp_customize->add_setting('bloc_3_label', array(
+		'default' => __('Section 1', 'bastille'),
 		'transport' => 'refresh',
         'sanitize_callback'	=> 'sanitize_text_field'
 
 	));
     $wp_customize->add_control(new WP_Customize_Control(
 		$wp_customize,
-		'programmes_label',
+		'bloc_3_label',
 		array(
-			'label' => __('Label for the Programmes section on homepage', 'bastille'),
-			'section' => 'bastille_programmes_section',
-			'settings' => 'programmes_label',
+			'label' => __('Display text for bloc 3', 'bastille'),
+			'section' => 'bastille_bloc_3_section',
+			'settings' => 'bloc_3_label',
 			'type' => 'text',
 		)
 	));
+    
+    // Bloc 3 post number
+    $wp_customize->add_setting('bloc_3_number', array(
+		'default' => __(3, 'bastille'),
+		'transport' => 'refresh',
+        'sanitize_callback'	=> 'absint'
+
+	));
+    $wp_customize->add_control(new WP_Customize_Control(
+		$wp_customize,
+		'bloc_3_number',
+		array(
+			'label' => __('Number of posts to display in bloc 3', 'bastille'),
+			'section' => 'bastille_bloc_3_section',
+			'settings' => 'bloc_3_number',
+			'type'     => 'select',
+            'choices'  => array(2,3,4,5,6,7,8,9,10)
+		)
+	));
 }
+
+
 add_action( 'customize_register', 'bastille_customize_register' );
 
 /**
