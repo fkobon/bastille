@@ -1,6 +1,6 @@
-$primary-color: #1b9bff;
+$primary-color: #FF007F;
 $secondary-color: $primary-color;
-$third-color: #004f7e;
+$third-color: $secondary-color;
 $menu-link-color: #6f6f6e;
 $dark-color: #020d16;
 $light-color: #FFF;
@@ -34,13 +34,4 @@ aside .widget-title {
 }
 .button:hover {
     background:$dark-color;
-}
-
-
-.slider-wrapper .slider-caption .panel .post-item-title a{
-    color: $light-color;
-}
-
-.slider-wrapper .slider-caption .panel .post-item-title a:hover {
-    color: $primary-color;
 }

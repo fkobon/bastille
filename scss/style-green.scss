@@ -1,4 +1,4 @@
-$primary-color: #f68700;
+$primary-color: #8cb700;
 $secondary-color: $primary-color;
 $third-color: #d63800;
 $menu-link-color: #6f6f6e;
@@ -8,28 +8,32 @@ $link-color: $primary-color;
 
 @import 'base';
 
-.orbit-bullets li {
-    border: solid 1px $link-color;
-}
-.orbit-bullets li.active {
-    background: $link-color;
-}
+
 .slider-wrapper .slider-caption .panel .post-item-title a{
     color:$primary-color;
 }
-.slider-wrapper .slider-caption .panel .post-item-title a:hover{
-    color:$secondary-color;
+
+
+.nav-wrapper nav.top-bar li.current-menu-item a:hover,
+.nav-wrapper nav.top-bar li.current-menu-ancestor a:hover,
+.nav-wrapper nav.top-bar li.current-menu-parent a:hover
+{
+    color: $light-color;
+}
+.slider-wrapper .slider-caption .label.category{ 
+    background-color:$primary-color;
+    color: $light-color;
 }
 
 aside .widget-title {
-    background: $third-color;
+    background: $primary-color;
 }
 .main-column .call-to-action .button.small {
-    background:$third-color;
+    background:$primary-color;
 }
 .main-column .call-to-action .button.small:hover {
     background:$primary-color;
 }
 .button:hover {
-    background:$third-color;
+    background:$dark-color;
 }

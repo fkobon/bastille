@@ -24,8 +24,8 @@ function bastille_customize_register( $wp_customize ) {
      * @link https://github.com/bueltge/Wordpress-Theme-Customizer-Custom-Controls
      *
      */
-    require_once dirname(__FILE__) . '/class-palette_custom_control.php';
     require_once dirname(__FILE__) . '/class-category_dropdown_custom_control.php';
+    require_once dirname(__FILE__) . '/class-palette_custom_control.php';
     
     $wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
     $wp_customize->add_setting(
@@ -135,7 +135,7 @@ function bastille_customize_register( $wp_customize ) {
     ));
     $wp_customize->add_control(
         new Category_Dropdown_Custom_Control(
-            $wp_customize, 'bastille_theme_color', array(
+            $wp_customize, 'bloc_2_category', array(
                 'label' => __( 'Bloc 2 category', 'bastille' ),
                 'section' => 'bastille_bloc_2_section',
                 'settings' => 'bloc_2_category',
@@ -197,7 +197,7 @@ function bastille_customize_register( $wp_customize ) {
 	));
     $wp_customize->add_control(
         new Category_Dropdown_Custom_Control(
-            $wp_customize, 'bastille_theme_color', array(
+            $wp_customize, 'bloc_3_category', array(
                 'label' => __( 'Bloc 3 category', 'bastille' ),
                 'section' => 'bastille_bloc_3_section',
                 'settings' => 'bloc_3_category',

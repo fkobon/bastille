@@ -47,8 +47,8 @@ class Palette_Custom_Control extends WP_Customize_Control
                         display: none;
                     }
                 
-                    #palette .chocolate {
-                        background: #5f3633;
+                    #palette .pink {
+                        background: #FF007F;
                     }
                     #palette .blue {
                         background: #0e94c9;
@@ -74,23 +74,23 @@ class Palette_Custom_Control extends WP_Customize_Control
                       <?php echo esc_html( $this->label ); ?>
                     </h1>
                   <div id="palette">
+                      <a class="yellow" href="#">
+                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> value="" />
+                        </a>
                       <a class="green" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="green" />
                     </a>
                     <a class="blue" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="blue" />
                     </a>
-                    <a class="chocolate" href="#">
-                      <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="chocolate" />
+                    <a class="pink" href="#">
+                      <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="pink" />
                     </a>
                     <a class="orange" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="orange" />
                     </a>
                     <a class="red" href="#">
                         <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> id="<?php echo $this->id; ?>" value="red" />
-                    </a>
-                    <a class="yellow" href="#">
-                        <input type="radio" name="<?php echo $this->id; ?>" <?php $this->link(); ?> value="" />
                     </a>
                   </div>
                 </label>
