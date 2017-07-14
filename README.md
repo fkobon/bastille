@@ -1,5 +1,5 @@
 # Bastille
-A modern modern theme for news websites.
+A modern theme for news websites.
 
 [![bastille_homepage_yellow.png](https://s6.postimg.org/dhc5anyzl/bastille_homepage_yellow.png)](https://postimg.org/image/3wsins9nh/)
 
