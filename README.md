@@ -7,6 +7,8 @@ A modern modern theme for news websites.
 Bastille is a clean, simple, and fully responsive WordPress theme for webzines. Its name, from French origins, refer to the Storming of the Bastille on 14 July 1789, but more importantly to 14 july, birthday of the author :). 
 It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using [Zurb Foundation](https://github.com/zurb/foundation-sites), a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Bastille is available in English, French, and Spanish for now.
 
+Special thanks to [Aglébé Marc-Aurèle, a crafty designer](https://www.behance.net/iznogoud) and friend who gave a helping hand by designing the layout of this WordPress theme.
+
 ## Installation
 
 #### Manual
