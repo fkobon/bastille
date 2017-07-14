@@ -1,21 +1,19 @@
-=== Acajou ===
+=== Bastille ===
 
 Contributors: automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
-Tested up to: 4.7.4
+Tested up to: 4.8
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Acajou, or underscores.
 
 == Description ==
 
-Arlene is a clean, simple, and fully responsive WordPress theme that suits non-profit organizations and looks awesome on any device. Its name, from Celtic origins, means Oath. 
-
-It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using Zurb Foundation https://github.com/zurb/foundation-sites, a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Arlene is available in English, French, and Spanish for now.
+Bastille is a clean, simple, and fully responsive WordPress theme for webzines. Its name, from French origins, refer to the Storming of the Bastille on 14 July 1789, but more importantly to 14 july, birthday of the author :). 
+It adjusts automatically to any screen size including tablets and smartphones as well as Retina displays. Theme is built using Zurb Foundation, a  framework for HTML5 / CSS3 which is SEO friendly. This WordPress theme was built with non-profit organizations in mind but be creative and unleash its full potential in eCommerce, business and other projects. Bastille is available in English, French, and Spanish for now.
 
 == Installation ==
 
@@ -27,7 +25,7 @@ It adjusts automatically to any screen size including tablets and smartphones as
 
 = Does this theme support any plugins? =
 
-Acajou includes support for Infinite Scroll in Jetpack.
+Bastille includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
@@ -46,10 +44,8 @@ and some parts under their respective licenses.
 
 **The exceptions to this license are as follows:**
 
-- Zurb Foundation] https://github.com/zurb/foundation-sites,for layout structure, under MIT License.
-- FontAwesome https://github.com/FortAwesome/Font-Awesome, under the SIL Open Font License.
-
-- Commons images https:commons.wikimedia.org, under Creative Commons By SA 4.0 License
-- ScrollReveal https://github.com/jlmakes/scrollreveal, under MIT License.
-- Roboto https://github.com/google/roboto, under Apache License 2.0 License.
+- Zurb Foundation https://github.com/zurb/foundation-sites, for layout structure, under MIT License.
+- FontAwesome (https://github.com/FortAwesome/Font-Awesome), Fair Display (https://www.fontsquirrel.com/fonts/playfair-display), Roboto (https://fonts.google.com/specimen/Roboto), and Lora (https://www.fontsquirrel.com/fonts/lora) fonts,  under the SIL Open Font License.
+- ScrollReveal (https://github.com/jlmakes/scrollreveal), under MIT License.
+- CSS Content table and Header commenting style was borrowed from Arlene theme (https://github.com/samuelguebo/arlene).
 
