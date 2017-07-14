@@ -30,7 +30,7 @@ if($category_id>0): //make sure a category has been selected
                 <div class="category-row main-row category-mix">
                     <!-- post list-->
                     <div class="post-list clearfix">
-                            <div class="small-8 medium-6 large-8 small-12 columns no-padding-left mix-big">
+                            <div class="large-8 medium-12 small-12 columns no-padding-left mix-big">
                                 <?php //starting the first loop
                                 $i = 1;	$args = array ('post_type'=>'post',
                                                        'showposts'=>1,
@@ -46,7 +46,7 @@ if($category_id>0): //make sure a category has been selected
                                 <?php endwhile;
                                 endif; wp_reset_query();?>
                             </div>
-                            <div class="small-12 medium-6 large-4 columns right no-padding mix-small">
+                            <div class="medium-12 large-4 small-12  columns right no-padding mix-small">
                                 <?php //starting the second loop but skip the first result using "offset""
                                 $i = 1;	$args = array ('post_type'=>'post',
                                                'showposts'=>2,

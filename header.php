@@ -35,26 +35,26 @@ and everything up until <div id="content">
             <header class="background-white main-row">
                 <div class="row clearfix">
                     <?php if(has_custom_logo()):?>
-                    <div class="small-12 large-4 medium-4 large-uncentered small-centered columns logo">
+                    <div class="large-4 medium-8 small-8 columns logo">
                         <a href="<?php echo site_url(); ?>">  
                             <?php the_custom_logo();?>
                         </a>
                     </div>
                     <?php else:?>
-                    <div class="small-12 large-4 medium-4 large-uncentered columns small-centered">
+                    <div class="large-4 medium-8 small-8 columns columns">
                         <h2 class="site-title">
                             <a href="<?php echo site_url(); ?>"><?php bloginfo('title'); ?></a>
                         </h2>
                     </div>
                     <?php endif;?>
-                    <div class="nav-wrapper large-8 medium-8 banner-top columns">
+                    <div class="large-8 medium-8 banner-top columns">
                         <?php dynamic_sidebar( 'banner-top' ); ?>
                     </div><!--/advertising banner-->  
-                    <div class="clearfix height-10"></div>
-                    <div class="nav-wrapper large-9 medium-8 small-2 columns left">
+                    <div class="clearfix height-10 clear-banner"></div>
+                    <div class="nav-wrapper large-9 medium-4 small-4 columns left">
                         <?php get_template_part('menu'); ?>
                     </div><!--/nav-wrapper-->   
-                    <div class="large-3 medium-4 small-3 columns right">
+                    <div class="large-3 medium-7 columns right search-wrapper">
                         <?php get_search_form(); ?>
                     </div><!--/search-form-->   
                 </div>

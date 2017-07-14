@@ -11,7 +11,7 @@ Template part for displaying articles with a big layout
 ================================================================================================
 */
 ?>
-<article id="post-<?php the_ID(); ?>" class="post-item">
+<article id="post-<?php the_ID(); ?>" class="post-item large-12">
     <!--post/-->
     <div class="post-item-caption">
         <div class="post-item-image"> 

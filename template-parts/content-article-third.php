@@ -13,7 +13,7 @@ Template part for displaying articles in loop
 ?>
     
 
-<article id="post-<?php the_ID(); ?>" class="post-item large-4 medium-4 columns">
+<article id="post-<?php the_ID(); ?>" class="post-item large-4 medium-6 small-12 columns">
     <!--post/-->
     <div class="post-item-caption">
         <div class="post-item-image"> 

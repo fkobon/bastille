@@ -1591,6 +1591,31 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 64em) {
+  .category-row .mix-small {
+    display: none; }
+
+  header .banner-top, header .clear-banner, .search-wrapper {
+    display: none; }
+
+  header div.logo img {
+    max-height: 70px;
+    width: auto; }
+
+  header div.logo {
+    padding-bottom: 10px; }
+
+  header .nav-wrapper {
+    line-height: 40px; }
+
+  .top-bar .toggle-topbar.menu-icon {
+    top: 15px; }
+
+  .main-row.slider-controllers {
+    display: none; }
+
+  .slider-caption .post-item-title {
+    font-size: 2em; }
+
   .nav-wrapper ul.right,
   .nav-wrapper ul.left, .top-bar-section .dropdown {
     float: none !important;
@@ -1601,6 +1626,9 @@ footer .breadcrumbs > *::before {
 
   slider-wrapper .slider-caption .label.category {
     margin-bottom: 30px; }
+
+  .slick-prev, .slick-next {
+    bottom: 20%; }
 
   .slider-wrapper .panel p, .slider-wrapper .post-item-date {
     display: none; }
@@ -1622,17 +1650,26 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 37.5em) {
+  .slider-caption .post-item-title {
+    font-size: 1.4em; }
+
+  .slider-caption span.category {
+    display: none; }
+
   .main-row {
     padding: 5px 5px;
     margin-top: 0px; }
+
+  .slick-prev, .slick-next {
+    top: 25%; }
+
+  .top-bar .toggle-topbar.menu-icon {
+    top: 0px; }
 
   section.fixed-header {
     position: relative;
     z-index: 100;
     width: auto; }
-
-  .slider-wrapper .slider-caption {
-    top: 8%; }
 
   header div.slogan .title {
     padding-top: 20px;
@@ -1642,14 +1679,6 @@ footer .breadcrumbs > *::before {
     margin-top: 20px;
     margin: 0 auto;
     float: none; }
-
-  header .socials {
-    display: none;
-    /*
-    padding-top: 40px;
-    float: none;
-    clear: both;
-    */ }
 
   header div.logo {
     margin-bottom: -55px !important; }
@@ -1738,9 +1767,6 @@ footer .breadcrumbs > *::before {
   .top-bar-section ul li > a {
     color: #f68700; }
 
-  .slider-wrapper .slider-caption .panel .post-item-title {
-    font-size: 1em; }
-
   .top-bar .toggle-topbar.menu-icon a span::after {
     font-size: 1.5em; } }
 /*
@@ -1749,17 +1775,8 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 30em) {
-  .slider-wrapper .slider-caption .panel .post-item-title {
-    font-size: 0.8em; }
-
-  .slider-wrapper .slider-caption .panel .button {
-    font-size: 0.5em; }
-
-  .orbit-bullets {
-    top: 20px; }
-
-  .slider-wrapper .slider-caption {
-    top: 5px; } }
+  .slider-wrapper .slider-caption .post-item-date {
+    display: none; } }
 /*
 ================================================================================================
 23.0 - Media Queries (Mobile Small 20em (320px))
@@ -1767,7 +1784,10 @@ footer .breadcrumbs > *::before {
 */
 @media only screen and (max-width: 20em) {
   header div.logo {
-    margin-bottom: -35px !important; } }
+    margin-bottom: -35px !important; }
+
+  .slider-controllers .post-item-title {
+    font-size: 1em; } }
 /*
 ================================================================================================
 24.0 - Miscelleanous (clearfix, figure, no-padding)
