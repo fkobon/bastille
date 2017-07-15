@@ -93,7 +93,7 @@ function bastille_widgets_init() {
     
     register_sidebar( array(
 		'name'          => esc_html__( 'Single sidebar', 'bastille' ),
-		'id'            => 'sidebar-single',
+		'id'            => 'sidebar-main',
 		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
 		'after_widget'  => '</section>',
@@ -101,15 +101,6 @@ function bastille_widgets_init() {
 		'after_title'   => '</h5>',
 	) );
     
-    register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bastille' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'bastille' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s widget">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h5 class="widget-title">',
-		'after_title'   => '</h5>',
-	) );
     
     register_sidebar( array(
 		'name'          => esc_html__( 'Banner top', 'bastille' ),

@@ -10,12 +10,12 @@ The sidebar containing the main widget area
 @author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar-main' ) ) {
 	return;
 }
 ?>
 
 <!-- #secondary -->
 <aside id="sidebar" class="large-4 columns no-padding-left">
-    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    <?php dynamic_sidebar( 'sidebar-main' ); ?>
 </aside>
