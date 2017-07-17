@@ -1032,7 +1032,15 @@ article .panel {
   /*
   margin-top:30px;
   */
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.category-row .post-list article {
+  padding-bottom: 0px;
+  margin-bottom: 0.5rem;
+  flex-grow: 1; }
 
 .row .category-header {
   margin-bottom: 10px;
@@ -1056,10 +1064,6 @@ article .panel {
 
 article.columns + article.columns:last-child {
   float: left; }
-
-.category-row article {
-  padding-bottom: 0px;
-  margin-bottom: 0.5rem; }
 
 .main-row .category-row article {
   margin-bottom: 0; }
