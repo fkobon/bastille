@@ -20,7 +20,7 @@ The slider containing the carousel animation
 						'suppress_filters'  => 0 
 						 ); 
 	$sliders = get_posts( $args );
-	if(0<$sliders->$post_count):?>
+	if(0<count($sliders)):?>
 		<!-- Slides: Images and Captions -->
 		<section id="slider" class="row slider-wrapper">
 			<?php
