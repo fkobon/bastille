@@ -55,7 +55,7 @@ if($bloc_category>0): //make sure a category has been selected
                                 <?php //starting the second loop but skip the first result using "offset""
                                 $i = 1;	$args = array ('post_type'=>'post',
                                                'showposts'=>2,
-                                               'cat'=> $category_id,
+                                               'cat'=> $bloc_category,
                                                 'offset'=>1
                                               );  
                                 

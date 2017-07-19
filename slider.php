@@ -21,22 +21,24 @@ The slider containing the carousel animation
 						 ); 
 	$sliders = get_posts( $args );
 	if(0<count($sliders)):?>
-		<!-- Slides: Images and Captions -->
-		<section id="slider" class="row slider-wrapper">
-			<?php
-			foreach ( $sliders  as $post )  : setup_postdata( $post );
-				get_template_part('template-parts/content','slide');
-			endforeach; ?>
-		</section>
-		<!-- Controllers: Titles only -->
-		<section class= "main-row slider-controllers">
-			<?php foreach ( $sliders  as $post):?>
-				<div class="controller-title">  
-					<h6 class="post-item-title">
-						<a href="javascript:void(0);"><?php the_title();?></a>
-					</h6> 
-				</div>
-			<?php endforeach; ?>
+		<section id="slider">
+			<!-- Slides: Images and Controllers -->
+			<section class="row slider-wrapper">
+				<?php
+				foreach ( $sliders  as $post )  : setup_postdata( $post );
+					get_template_part('template-parts/content','slide');
+				endforeach; ?>
+			</section>
+			<!-- Controllers: Titles only -->
+			<section class= "slider-controllers">
+				<?php foreach ( $sliders  as $post):?>
+					<div class="controller-title">  
+						<h6 class="post-item-title">
+							<a href="javascript:void(0);"><?php the_title();?></a>
+						</h6> 
+					</div>
+				<?php endforeach; ?>
+			</section>
 		</section>
 	
 

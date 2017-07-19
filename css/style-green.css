@@ -719,6 +719,10 @@ meta.foundation-mq-topbar {
     min-height: 120px;
     max-height: 120px;
     overflow: hidden; } }
+#slider {
+  position: relative;
+  width: 100%; }
+
 .slider-wrapper {
   min-height: 450px;
   max-height: 450px;
@@ -776,8 +780,10 @@ meta.foundation-mq-topbar {
 .slider-wrapper .slider-caption .panel .post-item-title a:hover {
   color: #8cb700; }
 
-.main-row.slider-controllers {
-  margin-top: -85px; }
+#slider .slider-controllers {
+  position: absolute;
+  width: 100%;
+  bottom: 0px; }
 
 .slider-controllers .controller-title {
   padding: 8px 20px;
