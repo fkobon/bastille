@@ -91,6 +91,8 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 All notable changes to this theme are documented in [CHANGELOG.md](https://github.com/samuelguebo/bastille/blob/master/CHANGELOG.md) file.
 
 # TODO
+* Un-capitalize heading fonts
+* Fix Slider controller titles heights
 * Use customizer API for social menu instead of Menu API
 * Feature for enabling/ disabling the slider
 * Additional slider layouts
