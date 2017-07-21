@@ -28,7 +28,7 @@ jQuery(document).ready(function ($) {
     /* Equalizer */
     $(window).load(function () {
         equalheight('.post-list .post-item .post-item-caption');
-        equalheight('.category-row .post-item-caption img');
+        //equalheight('.category-row .post-item-caption img');
         equalheight('.slider-wrapper .post-item img');
         equalheight('.category-row .post-item-title');
     });
