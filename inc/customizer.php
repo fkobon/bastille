@@ -42,33 +42,33 @@ function bastille_customize_register( $wp_customize ) {
 
     Kirki::add_field( 'bastille', array(
             'type'        => 'repeater',
-            'settings'    => 'news_repeater',
-            'label'       => __( 'Create a new section', 'bastille' ),
-            'description' => __( 'Set up the section, define category, number of posts, etc', 'kirki' ),
+            'settings'    => 'bloc_repeater',
+            'label'       => __( 'Create a new bloc', 'bastille' ),
+            'description' => __( 'Set up the bloc, define category, number of posts, etc', 'bastille' ),
             'section'     => 'home_section',
             'default'     => '',
             'priority'    => 10,
             'row_label' => array(
                 'type' => 'text',
-                'value' => esc_attr__('bloc', 'bastille' ),
+                'value' => esc_attr__('Bloc', 'bastille' ),
             ),
             'settings'    => 'home_section',
             'fields' => array(
-                'news_title' => array(
+                'bloc_title' => array(
                     'type'        => 'text',
                     //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-                    'description' => esc_attr__( 'Display text for section', 'bastille' ),
-                    'default'     => 'Section title',
+                    'description' => esc_attr__( 'Display text for bloc', 'bastille' ),
+                    'default'     => 'Bloc title',
                 ),
-                'news_category' => array(
+                'bloc_category' => array(
                         'type'        => 'select',
                         //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-                        'description' => esc_attr__( 'Category of the section', 'bastille' ),
+                        'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
                         'default'     => 0,
                         'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
                         'sanitize_callback'	=> 'absint'
                     ),
-                'news_number' => array(
+                'bloc_number' => array(
                         'type'        => 'number',
                         //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
                         'description' => esc_attr__( 'Number of posts to display', 'bastille' ),
@@ -79,6 +79,17 @@ function bastille_customize_register( $wp_customize ) {
                                 'step' => 1,
                             ),
                         'sanitize_callback'	=> 'absint'
+                    ),
+                'bloc_layout' => array(
+                        'type'        => 'radio-image',
+                        //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
+                        'description' => esc_attr__( 'Layout to choose', 'bastille' ),
+                        'default'     => 1,
+                        'choices'     => array(
+                                'layout-1'   => get_template_directory_uri() . '/img/layout/layout-1.jpg',
+                                'layout-2' => get_template_directory_uri() . '/img/layout/layout-2.jpg',
+                                'layout-3'  => get_template_directory_uri() . '/img/layout/layout-3.jpg',
+                            ),
                     ),
             )
         )

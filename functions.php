@@ -76,6 +76,16 @@ endif;
 add_action( 'after_setup_theme', 'bastille_setup' );
 
 /**
+ * Recommend the Kirki plugin
+ */
+require get_template_directory() . '/inc/include-kirki.php';
+/**
+ * Load the Kirki Fallback class
+ * Making sure that output works when Kirki is not installed
+ */
+require get_template_directory() . '/inc/kirki-fallback.php';
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
