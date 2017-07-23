@@ -13,14 +13,14 @@ Template part for displaying articles in loop
 ?>
     
 
-<article id="post-<?php the_ID(); ?>" class="post-item large-6 medium-6 columns">
+<article id="post-<?php the_ID(); ?>" class="post-item <?php echo $container_class;?> columns">
     <!--post/-->
     <div class="post-item-caption">
         <div class="post-item-image"> 
             <div class="colorful-line"> </div>
             <?php
                 if ( has_post_thumbnail_or_image ()) { 
-                    the_post_thumbnail( 'post-thumb' ); 
+                    the_post_thumbnail( $thumbnail_size ); 
                 }
             ?>
 

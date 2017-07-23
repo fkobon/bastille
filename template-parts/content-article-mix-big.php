@@ -18,12 +18,12 @@ Template part for displaying articles with a big layout
             <div class="colorful-line"> </div>
             <?php
                 if ( has_post_thumbnail_or_image ()) { 
-                    the_post_thumbnail( 'post-mix-thumb' ); 
+                    the_post_thumbnail( $thumbnail_size); 
                 }
             ?>
 
         </div>
-        <div class="panel columns large-8">
+        <div class="panel columns <?php echo $container_class;?>">
             <?php if( get_post_type( get_the_ID() ) == 'post' ):?>
                 <span class="post-item-date"><?php echo get_the_date('d/m/Y')?> / <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php the_author(); ?></a></span><br><!--date/-->
             <?php endif;?>

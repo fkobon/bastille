@@ -10,8 +10,10 @@ Template part for displaying the first bloc, two articles at a time
 @author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
-$category_id = esc_attr( get_theme_mod( 'bloc_1_category' ));
-if($category_id>0): //make sure a category has been selected
+$bloc_category  = $bloc_setting ['bloc_category'];
+$bloc_number    = $bloc_setting ['bloc_number'];
+$bloc_title     = $bloc_setting ['bloc_title'];
+if($bloc_category>0): //make sure a category has been selected
 ?>
 <section class="row main-row clearfix">
             <section class="large-8 columns main-column">
@@ -19,11 +21,11 @@ if($category_id>0): //make sure a category has been selected
                     <div class="columns large-12 category-header no-padding">
                         <div class="small-8 medium-6 large-6 columns no-padding-left">
                             <h4 class="category-title">
-                                <?php echo esc_attr( get_theme_mod( 'bloc_1_label' ));?>
+                                <?php echo esc_attr($bloc_title);?>
                             </h4>
                         </div>
                         <div class="small-4 medium-6 large-6 columns right no-padding">
-                            <a href="<?php echo get_category_link(esc_attr( get_theme_mod( 'bloc_1_category' )));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
+                            <a href="<?php echo get_category_link(esc_attr( $bloc_category));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
                         </div>
                     </div><!--header/-->
                 </div><!--header/-->
@@ -32,12 +34,12 @@ if($category_id>0): //make sure a category has been selected
                     <div class="post-list clearfix">
                         <?php //starting Bloc 1 loop;
                         $i = 1;	$args = array ('post_type'=>'post',
-                                               'showposts'=>esc_attr( get_theme_mod( 'bloc_1_number' )),
-                                               'cat'=> $category_id
+                                               'showposts'=>esc_attr( $bloc_number),
+                                               'cat'=> $bloc_category
                                               ); 
-                        $programmes = new WP_Query($args);                    
-                        if($programmes->have_posts() ) :
-                            while ( $programmes->have_posts())  : $programmes->the_post();
+                        $posts = new WP_Query($args);                    
+                        if($posts->have_posts() ) :
+                            while ( $posts->have_posts())  : $posts->the_post();
                                 get_template_part( 'template-parts/content', 'article' );
                             endwhile;
                         endif; wp_reset_query();?>
@@ -49,4 +51,4 @@ if($category_id>0): //make sure a category has been selected
                 <?php dynamic_sidebar( 'sidebar-home' ); ?>
             </aside>
 </section>
-<?php endif;$category_id = 0;
+<?php endif;$bloc_category = 0;

@@ -40,7 +40,7 @@ function bastille_customize_register( $wp_customize ) {
 		'priority' => 30,
 	));
 
-    Kirki::add_field( 'bastille', array(
+    Bastille_Kirki::add_field( 'bastille', array(
             'type'        => 'repeater',
             'settings'    => 'bloc_repeater',
             'label'       => __( 'Create a new bloc', 'bastille' ),
@@ -65,7 +65,8 @@ function bastille_customize_register( $wp_customize ) {
                         //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
                         'description' => esc_attr__( 'Category of the bloc', 'bastille' ),
                         'default'     => 0,
-                        'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
+                        //'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
+                        'choices'     => bastille_categories_array(),
                         'sanitize_callback'	=> 'absint'
                     ),
                 'bloc_number' => array(

@@ -505,3 +505,25 @@ if(!function_exists('bastille_custom_breadcrumbs')) {
         endswitch;
     echo '</div>';
     }
+    /*
+     * Get an array of categories to be used in Customizer API (via Kirki)
+     *
+     */
+    function bastille_categories_array() {
+        $categories = array();
+        $terms = get_terms( array('taxonomy' => 'category') );
+        foreach ($terms as $category) {
+            $categories[$category->term_id] = $category->name;
+        }
+        return $categories;
+    }
+    /*
+     * A variant of get_template_part that includes the thumbnail and section class
+     *
+     */
+    function bastille_get_template_part($file, $container_class, $thumbnail_size){
+        // make sure the required data are in place
+        if(""!==$file){
+            include(locate_template($file));
+        }
+    }
