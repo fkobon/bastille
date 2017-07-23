@@ -35,39 +35,31 @@ function bastille_customize_register( $wp_customize ) {
     ) );
     
     // Create section for news settings
-    Bastille_Kirki::add_section('news_section', array(
-		'title' => __('News section', 'bastille'),
+    Bastille_Kirki::add_section('home_section', array(
+		'title' => __('Home section', 'bastille'),
 		'priority' => 30,
 	));
 
     Kirki::add_field( 'bastille', array(
             'type'        => 'repeater',
             'settings'    => 'news_repeater',
-            'label'       => __( 'Add a new section for news', 'bastille' ),
-            'description' => __( 'News section, define category, number of posts, etc', 'kirki' ),
-            'section'     => 'news_section',
+            'label'       => __( 'Create a new section', 'bastille' ),
+            'description' => __( 'Set up the section, define category, number of posts, etc', 'kirki' ),
+            'section'     => 'home_section',
             'default'     => '',
             'priority'    => 10,
             'row_label' => array(
                 'type' => 'text',
-                'value' => esc_attr__('your custom value', 'bastille' ),
+                'value' => esc_attr__('bloc', 'bastille' ),
             ),
-            'settings'    => 'news_section',
+            'settings'    => 'home_section',
             'fields' => array(
                 'news_title' => array(
                     'type'        => 'text',
-                    'label'       => esc_attr__( 'Display text for section', 'bastille' ),
+                    //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
                     'description' => esc_attr__( 'Display text for section', 'bastille' ),
-                    'default'     => 'News section title',
+                    'default'     => 'Section title',
                 ),
-                'news_number' => array(
-                        'type'        => 'select',
-                        //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
-                        'description' => esc_attr__( 'Number of posts to display', 'bastille' ),
-                        'default'     => 1,
-                        'choices'  => array('1'=>2,'2'=>2,'3'=>3,'4'=>4,'5'=>5,'6'=>6,'7'=>7,'8'=>8, '9'=>9),
-                        'sanitize_callback'	=> 'absint'
-                    ),
                 'news_category' => array(
                         'type'        => 'select',
                         //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
@@ -75,13 +67,25 @@ function bastille_customize_register( $wp_customize ) {
                         'default'     => 0,
                         'choices'     => Kirki_Helper::get_terms( array('taxonomy' => 'category') ),
                         'sanitize_callback'	=> 'absint'
-                    )
+                    ),
+                'news_number' => array(
+                        'type'        => 'number',
+                        //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
+                        'description' => esc_attr__( 'Number of posts to display', 'bastille' ),
+                        'default'     => 1,
+                        'choices'     => array(
+                                'min'  => 1,
+                                'max'  => 10,
+                                'step' => 1,
+                            ),
+                        'sanitize_callback'	=> 'absint'
+                    ),
             )
         )
     );
         
     
-    /*   
+   
     
     $wp_customize->remove_control('header_textcolor'); // remove existing Headline color setting
     $wp_customize->add_setting(
@@ -102,15 +106,6 @@ function bastille_customize_register( $wp_customize ) {
             )
         );    
    
-    $wp_customize->add_control(
-        new Category_Dropdown_Custom_Control(
-            $wp_customize, 'bloc_2_category', array(
-                'label' => __( 'Bloc 2 category', 'bastille' ),
-                'section' => 'bastille_bloc_2_section',
-                'settings' => 'bloc_2_category',
-            )
-    ));
-    */
 }
 
 add_action( 'customize_register', 'bastille_customize_register' );
