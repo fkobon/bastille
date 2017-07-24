@@ -10,8 +10,9 @@ Template part for displaying the second bloc, a three-bloc layout
 @author         Samuel Guebo (http://samuelguebo.co/)
 ================================================================================================
 */
-$category_id = esc_attr( get_theme_mod( 'bloc_2_category' ));
-if($category_id>0): //make sure a category has been selected
+$bloc_category  = $bloc_setting ['bloc_category'];
+$bloc_title     = $bloc_setting ['bloc_title'];
+if($bloc_category>0): //make sure a category has been selected
 ?>
 <section class="row main-row clearfix">
             <section class="columns main-column">
@@ -19,11 +20,11 @@ if($category_id>0): //make sure a category has been selected
                     <div class="columns large-12 category-header no-padding">
                         <div class="small-8 medium-6 large-6 columns no-padding-left">
                             <h4 class="category-title">
-                                <?php echo esc_attr( get_theme_mod( 'bloc_2_label' ));?>
+                                <?php echo esc_attr( $bloc_title );?>
                             </h4>
                         </div>
                         <div class="small-4 medium-6 large-6 columns right no-padding">
-                            <a href="<?php echo get_category_link(esc_attr( get_theme_mod( 'bloc_2_category' )));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
+                            <a href="<?php echo get_category_link(esc_attr( $bloc_category));?>" class="small post-item-button radius right"><?php _e('Show all','bastille')?></a>
                         </div>
                     </div><!--header/-->
                 </div><!--header/-->
@@ -34,14 +35,18 @@ if($category_id>0): //make sure a category has been selected
                                 <?php //starting the first loop
                                 $i = 1;	$args = array ('post_type'=>'post',
                                                        'showposts'=>1,
-                                                        'cat'=> $category_id,
+                                                        'cat'=> $bloc_category,
                                               );
                                 
                                 
-                                $posts = new WP_Query($args);                    
-                                if($posts->have_posts() ) :
-                                    while ( $posts->have_posts())  : $posts->the_post();
-                                        get_template_part( 'template-parts/content', 'article-mix-big' );
+                                $bloc_posts = new WP_Query($args);                    
+                                if($bloc_posts->have_posts() ) :
+                                    while ( $bloc_posts->have_posts())  : $bloc_posts->the_post();
+                                        if(has_post_thumbnail()){
+                                            bastille_get_template_part('template-parts/content-article-mix-big.php', 'large-8 medium-6 small-12', 'post-mix-thumb');
+                                        }else {
+                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-6 small-12', 'post-mix-thumb');
+                                        }
                                 ?>
                                 <?php endwhile;
                                 endif; wp_reset_query();?>
@@ -54,10 +59,14 @@ if($category_id>0): //make sure a category has been selected
                                                 'offset'=>1
                                               );  
                                 
-                                $posts = new WP_Query($args);                    
-                                if($posts->have_posts() ) :
-                                    while ( $posts->have_posts())  : $posts->the_post();
-                                        get_template_part( 'template-parts/content', 'article-mix-small' );
+                                $bloc_posts = new WP_Query($args);                    
+                                if($bloc_posts->have_posts() ) :
+                                    while ( $bloc_posts->have_posts())  : $bloc_posts->the_post();
+                                        if(has_post_thumbnail()){
+                                            bastille_get_template_part('template-parts/content-article-mix-small.php', 'large-8 medium-6 small-12', 'post-mix-thumb');
+                                        }else {
+                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-6 small-12', 'post-mix-thumb');
+                                        }
                                 ?>
                                 <?php endwhile;
                                 endif; wp_reset_query();?>                            
@@ -67,4 +76,4 @@ if($category_id>0): //make sure a category has been selected
                 </div>
             </section>
 </section>
-<?php endif;$category_id = 0;
+<?php endif;

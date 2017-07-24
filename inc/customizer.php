@@ -36,8 +36,8 @@ function bastille_customize_register( $wp_customize ) {
     
     // Create section for news settings
     Bastille_Kirki::add_section('home_section', array(
-		'title' => __('Home section', 'bastille'),
-		'priority' => 30,
+		'title' => __('Home sections', 'bastille'),
+		'priority' => 10,
 	));
 
     Bastille_Kirki::add_field( 'bastille', array(
@@ -46,13 +46,12 @@ function bastille_customize_register( $wp_customize ) {
             'label'       => __( 'Create a new bloc', 'bastille' ),
             'description' => __( 'Set up the bloc, define category, number of posts, etc', 'bastille' ),
             'section'     => 'home_section',
-            'default'     => '',
+            'default'     => array(),
             'priority'    => 10,
             'row_label' => array(
                 'type' => 'text',
                 'value' => esc_attr__('Bloc', 'bastille' ),
             ),
-            'settings'    => 'home_section',
             'fields' => array(
                 'bloc_title' => array(
                     'type'        => 'text',
@@ -85,7 +84,7 @@ function bastille_customize_register( $wp_customize ) {
                         'type'        => 'radio-image',
                         //'label'       => esc_attr__( 'Display text for section', 'bastille' ),
                         'description' => esc_attr__( 'Layout to choose', 'bastille' ),
-                        'default'     => 1,
+                        'default'     => 'layout-1',
                         'choices'     => array(
                                 'layout-1'   => get_template_directory_uri() . '/img/layout/layout-1.jpg',
                                 'layout-2' => get_template_directory_uri() . '/img/layout/layout-2.jpg',

@@ -22,24 +22,23 @@ get_template_part ('slider');
 if ( class_exists( 'Kirki' ) ):
 
     // Theme_mod settings to check.
-    $bloc_repeater_setting = get_theme_mod( 'bloc_repeater');
-    foreach( $bloc_repeater_setting as $bloc_setting ) {
-        $layout = $bloc_setting ['bloc_layout'];
-        switch($layout){
-            case 'layout-1':
-                get_template_part('template-parts/bloc','1');
-                /*
-                break;
-            case 'layout-2':
-                break;
-                bastille_get_template_part('template-parts/bloc-2.php', 'large-8', 'post-mix-thumb');
-            case 'layout-3':
-                bastille_get_template_part('template-parts/bloc-3.php', 'large-4 medium-6 small-12', 'post-thumb');
-                break;
-                */
-        }
-        
-    }
+    $bloc_repeater_settings = Bastille_Kirki::get_option( 'bloc_repeater');
+    if(is_array($bloc_repeater_settings)):
+        foreach( $bloc_repeater_settings as $bloc_setting ) {
+            $layout = $bloc_setting['bloc_layout'];
+            switch($layout){
+                case 'layout-1':
+                    include('template-parts/bloc-1.php');
+                    break;
+                case 'layout-2':
+                    include('template-parts/bloc-2.php');
+                    break;
+                case 'layout-3':
+                    include('template-parts/bloc-3.php');
+                    break;
+            }
+        } 
+    endif;
 else:
 ?>
 <div class="post-list clearfix">

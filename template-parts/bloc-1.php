@@ -11,17 +11,16 @@ Template part for displaying the first bloc, two articles at a time
 ================================================================================================
 */
 $bloc_category  = $bloc_setting ['bloc_category'];
-$bloc_number    = $bloc_setting ['bloc_number'];
 $bloc_title     = $bloc_setting ['bloc_title'];
 if($bloc_category>0): //make sure a category has been selected
 ?>
 <section class="row main-row clearfix">
-            <section class="large-8 columns main-column">
+            <section class="columns main-column">
                 <div class="main-row no-margin-top no-padding-top no-margin-top" >
                     <div class="columns large-12 category-header no-padding">
                         <div class="small-8 medium-6 large-6 columns no-padding-left">
                             <h4 class="category-title">
-                                <?php echo esc_attr($bloc_title);?>
+                                <?php echo esc_attr( $bloc_title );?>
                             </h4>
                         </div>
                         <div class="small-4 medium-6 large-6 columns right no-padding">
@@ -29,26 +28,30 @@ if($bloc_category>0): //make sure a category has been selected
                         </div>
                     </div><!--header/-->
                 </div><!--header/-->
-                <div class="category-row">
+                <div class="category-row main-row category-mix">
                     <!-- post list-->
                     <div class="post-list clearfix">
-                        <?php //starting Bloc 1 loop;
-                        $i = 1;	$args = array ('post_type'=>'post',
-                                               'showposts'=>esc_attr( $bloc_number),
-                                               'cat'=> $bloc_category
-                                              ); 
-                        $posts = new WP_Query($args);                    
-                        if($posts->have_posts() ) :
-                            while ( $posts->have_posts())  : $posts->the_post();
-                                get_template_part( 'template-parts/content', 'article' );
-                            endwhile;
-                        endif; wp_reset_query();?>
-                    </div>
+                            <div class="large-12 medium-12 small-12 columns no-padding-left mix-big">
+                                <?php //starting the first loop
+                                $i = 1;	$args = array ('post_type'=>'post',
+                                                       'showposts'=>1,
+                                                        'cat'=> $bloc_category,
+                                              );
+                                
+                                $bloc_posts = new WP_Query($args);                    
+                                if($bloc_posts->have_posts() ) :
+                                    while ( $bloc_posts->have_posts())  : $bloc_posts->the_post();
+                                        if(has_post_thumbnail()){
+                                            bastille_get_template_part('template-parts/content-article-mix-big.php', 'large-12 medium-6 small-12', 'slider-cover');
+                                        }else {
+                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-6 small-12', 'slider-cover');
+                                        }
+                                ?>
+                                <?php endwhile;
+                                endif; wp_reset_query();?>
+                            </div>                            
+                        </div><!--header/-->                     
                 </div>
             </section>
-            
-            <aside id="sidebar" class="large-4 columns">
-                <?php dynamic_sidebar( 'sidebar-home' ); ?>
-            </aside>
 </section>
-<?php endif;$bloc_category = 0;
+<?php endif; 

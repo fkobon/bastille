@@ -37,9 +37,9 @@ get_header(); ?>
                                 while ( have_posts() ) : the_post();
 
                                     if(has_post_thumbnail()){
-                                        get_template_part( 'template-parts/content', 'article' );
+                                        bastille_get_template_part('template-parts/content-article.php', 'large-6 medium-6 small-12', 'post-thumb');
                                     }else {
-                                        get_template_part( 'template-parts/content', 'article-without-thumb' );
+                                        bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-6 medium-6 small-12', 'post-thumb');
                                     }
 
                                 endwhile;
