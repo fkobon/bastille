@@ -77,13 +77,14 @@ The theme is offered free of charge. If someone asked money for it, someone just
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under [GNU General Public License version 2](http://github.com/samuelguebo/bastille/LICENSE).
 
-**The exceptions to this license are as follows:**
+**The exceptions to this license and other credits are below:**
 
 - [Zurb Foundation](https://github.com/zurb/foundation-sites), for layout structure, under MIT License.
-
 - [FontAwesome](https://github.com/FortAwesome/Font-Awesome), [Fair Display](https://www.fontsquirrel.com/fonts/playfair-display), [Roboto](https://fonts.google.com/specimen/Roboto), and [Lora](https://www.fontsquirrel.com/fonts/lora) fonts,  under the SIL Open Font License.
 - [ScrollReveal](https://github.com/jlmakes/scrollreveal), under MIT License.
 - CSS Content table and Header commenting style was borrowed from [Arlene theme](https://github.com/samuelguebo/arlene)
+- Slider is built using [Slick](https://github.com/kenwheeler/slick/), a prodigious and dead-simple slider
+- Customizer option uses [Kirki](https://github.com/aristath/kirki), a toolkit expanding WordPress Customizer API features
 
 
 # Change log
