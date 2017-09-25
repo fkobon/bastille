@@ -28,13 +28,13 @@ if ( class_exists( 'Kirki' ) ):
             $layout = $bloc_setting['bloc_layout'];
             switch($layout){
                 case 'layout-1':
-                    include('template-parts/bloc-1.php');
+                    require('template-parts/bloc-1.php');
                     break;
                 case 'layout-2':
-                    include('template-parts/bloc-2.php');
+                    require('template-parts/bloc-2.php');
                     break;
                 case 'layout-3':
-                    include('template-parts/bloc-3.php');
+                    require('template-parts/bloc-3.php');
                     break;
             }
         } 
