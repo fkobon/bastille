@@ -27,10 +27,11 @@ jQuery(document).ready(function ($) {
     
     /* Equalizer */
     $(window).load(function () {
-        /*
+
+        equalheight('.post-list .post-item');
         equalheight('.post-list .post-item .post-item-caption');
         equalheight('.category-row .post-item-title');
-        */
+        
     });
     
     /* Back to Top */

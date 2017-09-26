@@ -45,7 +45,7 @@ if($bloc_category>0): //make sure a category has been selected
                                         if(has_post_thumbnail()){
                                             bastille_get_template_part('template-parts/content-article-mix-big.php', 'large-8 medium-6 small-12', 'post-mix-thumb');
                                         }else {
-                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-6 small-12', 'post-mix-thumb');
+                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-12 small-12', 'post-mix-thumb');
                                         }
                                 ?>
                                 <?php endwhile;
@@ -65,7 +65,7 @@ if($bloc_category>0): //make sure a category has been selected
                                         if(has_post_thumbnail()){
                                             bastille_get_template_part('template-parts/content-article-mix-small.php', 'large-8 medium-6 small-12', 'post-mix-thumb');
                                         }else {
-                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-6 small-12', 'post-mix-thumb');
+                                            bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-12 medium-12 small-12', 'post-mix-thumb');
                                         }
                                 ?>
                                 <?php endwhile;

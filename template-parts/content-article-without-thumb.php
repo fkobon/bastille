@@ -12,12 +12,12 @@ Template part for displaying articles in loop
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post-item large-6 medium-6 columns">
+<article id="post-<?php the_ID(); ?>" class="post-item no-thumb <?php echo $container_class;?> columns">
     <!--post/-->
     <div class="post-item-caption">        
         <div class="panel">
             <span class="post-item-date wrap"><?php echo get_the_date('d/m/Y')?></span>
-            <h6 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h6>
+            <h3 class="post-item-title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h3>
             <p><?php the_excerpt();?></p> 
             <a href="<?php the_permalink();?>" class="small button post-item-buttom"><?php _e('Read more','bastille')?></a> 
             <?php if ( get_edit_post_link() ) : ?>

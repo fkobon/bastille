@@ -1085,6 +1085,11 @@ article.columns + article.columns:last-child {
   bottom: 20px;
   padding: 20px; }
 
+.category-row.category-mix .no-thumb .post-item-caption .panel {
+  position: relative;
+  bottom: 0px;
+  padding: 0px; }
+
 .category-row .post-item-caption .panel {
   border: none;
   margin-top: 10px;
@@ -1102,6 +1107,9 @@ article.columns + article.columns:last-child {
 
 .category-row.category-mix .panel .post-item-title, .category-row.category-mix .panel p, .category-row.category-mix .panel .post-item-date {
   color: #FFF; }
+
+.category-row.category-mix .no-thumb .panel .post-item-title, .category-row.category-mix .no-thumb .panel p, .category-row.category-mix .no-thumb .panel .post-item-date {
+  color: #000; }
 
 .category-row.category-mix .mix-small article:first-child {
   margin-bottom: 20px; }
