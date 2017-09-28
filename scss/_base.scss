@@ -74,6 +74,9 @@ h6 {
 		font-family: $primary-font;
 		color: $link-color;
 		font-weight: normal;
+		white-space: wrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 }
 @font-face {
 		font-family: 'Montserrat';

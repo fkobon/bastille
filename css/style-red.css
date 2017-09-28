@@ -55,7 +55,10 @@ a:hover, a:focus {
   margin-bottom: 0.625rem;
   font-family: "Playfair Display", "Georgia", sans-serif;
   color: #ff2323;
-  font-weight: normal; }
+  font-weight: normal;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 @font-face {
   font-family: 'Montserrat';
