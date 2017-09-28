@@ -56,7 +56,6 @@ a:hover, a:focus {
   margin-bottom: 0.625rem;
   font-family: "Playfair Display", "Georgia", sans-serif;
   color: #ffb400;
-  text-transform: uppercase;
   font-weight: normal; }
 
 @font-face {
@@ -134,7 +133,6 @@ header div.slogan a:hover {
 
 .single-cover .title.center {
   text-align: center;
-  text-transform: uppercase;
   font-family: "Playfair Display", "Georgia", sans-serif;
   padding: 1.6em 0px;
   display: block;
@@ -980,7 +978,6 @@ article .post-item-date {
 
 .single-row article.post-item .post-item-title {
   font-family: "Playfair Display", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
-  text-transform: uppercase;
   line-height: 2.5rem;
   padding-bottom: 5px;
   text-align: left; }
