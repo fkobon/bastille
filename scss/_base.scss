@@ -166,7 +166,6 @@ header div.slogan a:hover {
         padding: 1.6em 0px;
         display: block;
         font-weight: 300;
-        text-transform: uppercase;
         color: $light-color;
     
     }
@@ -811,7 +810,6 @@ meta.foundation-mq-topbar {
     font-weight: 300;
     line-height: 1.2;
     font-family: $primary-font;
-    text-transform:capitalize;
 }
 
 .slider-wrapper .slider-caption .panel .post-item-title a{
@@ -1078,7 +1076,6 @@ article .panel .button:focus,
 
 article.post-item .post-item-title {
     font-family: $primary-font, Helvetica, Roboto, Arial, sans-serif;
-    text-transform: capitalize;
     font-weight: 300;
 }
 
@@ -1212,7 +1209,6 @@ article.columns + article.columns:last-child {
     font-weight: 300;
     line-height: 1.2;
     font-family: $primary-font;
-    text-transform:capitalize;
 }
 .category-row.category-mix .panel .post-item-title, .category-row.category-mix .panel p, .category-row.category-mix .panel .post-item-date {
     color: #FFF;
@@ -1282,7 +1278,6 @@ article.columns + article.columns:last-child {
     border-bottom: 0px;
 }
 .event-widget .day, .event-widget .full-day, .event-widget .month{
-    text-transform: capitalize;
     font-family: $primary-font; 
     line-height: 0.6em;
 }

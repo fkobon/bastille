@@ -138,7 +138,6 @@ header div.slogan a:hover {
   padding: 1.6em 0px;
   display: block;
   font-weight: 300;
-  text-transform: uppercase;
   color: #FFF; }
 
 header .site-title {
@@ -771,8 +770,7 @@ meta.foundation-mq-topbar {
 .slider-wrapper .slider-caption .panel .post-item-title {
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Playfair Display", "Georgia", sans-serif;
-  text-transform: capitalize; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 .slider-wrapper .slider-caption .panel .post-item-title a {
   color: #FFF; }
@@ -1001,7 +999,6 @@ article .panel .button:focus,
 
 article.post-item .post-item-title {
   font-family: "Playfair Display", "Georgia", sans-serif, Helvetica, Roboto, Arial, sans-serif;
-  text-transform: capitalize;
   font-weight: 300; }
 
 article.post-item .post-item-title a {
@@ -1117,8 +1114,7 @@ article.columns + article.columns:last-child {
 .category-row.category-mix .panel .post-item-title {
   font-weight: 300;
   line-height: 1.2;
-  font-family: "Playfair Display", "Georgia", sans-serif;
-  text-transform: capitalize; }
+  font-family: "Playfair Display", "Georgia", sans-serif; }
 
 .category-row.category-mix .panel .post-item-title, .category-row.category-mix .panel p, .category-row.category-mix .panel .post-item-date {
   color: #FFF; }
@@ -1177,7 +1173,6 @@ article.columns + article.columns:last-child {
   border-bottom: 0px; }
 
 .event-widget .day, .event-widget .full-day, .event-widget .month {
-  text-transform: capitalize;
   font-family: "Playfair Display", "Georgia", sans-serif;
   line-height: 0.6em; }
 
