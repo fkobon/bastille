@@ -787,7 +787,8 @@ meta.foundation-mq-topbar {
 .slider-controllers .slick-track {
   display: flex;
   flex-direction: row;
-  height: 80px; }
+  height: 80px;
+  overflow: hidden; }
 
 .slider-controllers .controller-title {
   padding: 8px 20px;
