@@ -71,50 +71,50 @@ function new_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 function bastille_new_excerpt_length($max_char, $more_link_text = '...',$notagp = false, $stripteaser = 0, $more_file = '') {
-						$content = get_the_content($more_link_text, $stripteaser, $more_file);
-						$content = apply_filters('the_content', $content);
-						$content = str_replace(']]>', ']]&gt;', $content);
-						$content = strip_tags($content);
-		
-						/*
-						 * USEFUL IN TEST MODE
-						 *
-								if (""==$content) {
-								$content = "Non a vel turpis tincidunt rhoncus magna mattis! Integer ac, lacus, elit. Et ac est cursus, etiam mus adipiscing auctor, elit vel mid mattis! Pid facilisis! Tincidunt. Lorem dictumst dapibus, tincidunt placerat vel dolor rhoncus rhoncus mid velit massa. Scelerisque! Porttitor placerat auctor a, turpis adipiscing et magna eros pulvinar aliquam aliquam enim pulvinar cum lorem tempor pulvinar cum. Dolor, a magnis, ultrices dis, tincidunt sed, adipiscing vel ridiculus. In augue tristique";
-								}
-						 *
-						 */
-					 if (isset($_GET['p']) && strlen($_GET['p']) > 0) {
-							if($notagp) {
-							echo $content;
-							}
-							else {
-							// echo '<div class="slide_excerpt">';
-							echo $content;
-							// echo "</div>";
-							}
-					 }
-					 else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
-								$content = substr($content, 0, $espacio);
-								$content = $content;
-								if($notagp) {
-								echo $content;
-								echo $more_link_text;
-								}
-								else {
-								echo $content;
-								echo $more_link_text;
-								}
-					 }
-					 else {
-							if($notagp) {
-							echo $content;
-							}
-							else {
-							echo $content;
-							}
-					 }
-				}
+	$content = get_the_content($more_link_text, $stripteaser, $more_file);
+	$content = apply_filters('the_content', $content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$content = strip_tags($content);
+
+	/*
+	 * USEFUL IN TEST MODE
+	 *
+			if (""==$content) {
+			$content = "Non a vel turpis tincidunt rhoncus magna mattis! Integer ac, lacus, elit. Et ac est cursus, etiam mus adipiscing auctor, elit vel mid mattis! Pid facilisis! Tincidunt. Lorem dictumst dapibus, tincidunt placerat vel dolor rhoncus rhoncus mid velit massa. Scelerisque! Porttitor placerat auctor a, turpis adipiscing et magna eros pulvinar aliquam aliquam enim pulvinar cum lorem tempor pulvinar cum. Dolor, a magnis, ultrices dis, tincidunt sed, adipiscing vel ridiculus. In augue tristique";
+			}
+	 *
+	 */
+ if (isset($_GET['p']) && strlen($_GET['p']) > 0) {
+		if($notagp) {
+		echo $content;
+		}
+		else {
+		// echo '<div class="slide_excerpt">';
+		echo $content;
+		// echo "</div>";
+		}
+ }
+ else if ((strlen($content)>$max_char) && ($espacio = strpos($content, " ", $max_char ))) {
+			$content = substr($content, 0, $espacio);
+			$content = $content;
+			if($notagp) {
+			echo $content;
+			echo $more_link_text;
+			}
+			else {
+			echo $content;
+			echo $more_link_text;
+			}
+ }
+ else {
+		if($notagp) {
+		echo $content;
+		}
+		else {
+		echo $content;
+		}
+ }
+}
 
 /**
  * Dealig with submenu items
