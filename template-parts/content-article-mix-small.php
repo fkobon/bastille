@@ -17,7 +17,7 @@ Template part for displaying articles with a big layout
         <div class="post-item-image"> 
             <div class="colorful-line"> </div>
             <?php
-                if ( has_post_thumbnail_or_image ()) { 
+                if ( bastille_has_post_thumbnail_or_image ()) { 
                     the_post_thumbnail( 'post-thumb' ); 
                 }
             ?>

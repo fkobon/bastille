@@ -19,7 +19,7 @@ Template part for displaying articles in loop
         <div class="post-item-image"> 
             <div class="colorful-line"> </div>
             <?php
-                if ( has_post_thumbnail_or_image ()) { 
+                if ( bastille_has_post_thumbnail_or_image ()) { 
                     the_post_thumbnail( 'post-thumb' ); 
                 }
             ?>
