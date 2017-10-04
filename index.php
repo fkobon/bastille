@@ -41,43 +41,45 @@ if ( class_exists( 'Kirki' ) ):
     endif;
 else:
 ?>
-<div class="post-list clearfix">
-    <div class="row" >
-        <div class="main-row no-padding-top" >
-            <div class="columns large-12 category-header no-padding">
-                    <h4 class="category-title">
-                        <?php _e('Recent posts');?>
-                    </h4>
-            </div><!--header/-->
-        </div><!--main-row/-->
-    </div><!--row/-->
-    <?php
-        if ( have_posts() ) :
-            /* Start the Loop */
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // for pagination purpose
-            while ( have_posts() ) : the_post();
+<div class="category-row">
+    <div class="post-list clearfix">
+        <div class="row" >
+            <div class="main-row no-padding-top" >
+                <div class="columns large-12 category-header no-padding">
+                        <h4 class="category-title">
+                            <?php _e('Recent posts', 'bastille');?>
+                        </h4>
+                </div><!--header/-->
+            </div><!--main-row/-->
+        </div><!--row/-->
+        <?php
+            if ( have_posts() ) :
+                /* Start the Loop */
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // for pagination purpose
+                while ( have_posts() ) : the_post();
 
-                if(has_post_thumbnail()){
-                    bastille_get_template_part('template-parts/content-article.php', 'large-4 medium-6 small-12', 'post-thumb');
-                }else {
-                    bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-4 medium-6 small-12', 'post-thumb');
-                }
+                    if(has_post_thumbnail()){
+                        bastille_get_template_part('template-parts/content-article.php', 'large-4 medium-6 small-12', 'post-thumb');
+                    }else {
+                        bastille_get_template_part('template-parts/content-article-without-thumb.php', 'large-4 medium-6 small-12', 'post-thumb');
+                    }
 
-            endwhile;
+                endwhile;
 
-        else :
+            else :
 
-            get_template_part( 'template-parts/content', '404' );
+                get_template_part( 'template-parts/content', '404' );
 
-        endif; ?>
-</div>
-<div class="pagination-wrapper columns large-4 large-centered" >
-    <?php the_posts_pagination( array(
-        'mid_size' => 2,
-        'prev_text' => __( '&laquo;', 'bastille' ),
-        'next_text' => __( '&raquo;', 'bastille' ),
-        'screen_reader_text' => ' '
-    ) ); ?>
+            endif; ?>
+    </div>
+    <div class="pagination-wrapper columns large-4 large-centered" >
+        <?php the_posts_pagination( array(
+            'mid_size' => 2,
+            'prev_text' => __( '&laquo;', 'bastille' ),
+            'next_text' => __( '&raquo;', 'bastille' ),
+            'screen_reader_text' => ' '
+        ) ); ?>
+    </div>
 </div>
 <?php
 endif;
