@@ -1,10 +1,10 @@
 === Bastille ===
 
-Contributors: automattic
+Contributors: Samuel Guebo
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 4.8.2
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -28,24 +28,30 @@ It adjusts automatically to any screen size including tablets and smartphones as
 Bastille includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
-
-= 1.0 - May 12 2015 =
-* Initial release
+=== [1.0.0] - 2017-07-14 ===
+- Initial version
+- Custom header image(s)
+- Six flavors: yellow, blue, green, red, purple, and pinkn. You might switch between these colors in using the Customizer.
+- Add Fading effects to block using [Scroll Reveal](https://github.com/jlmakes/scrollreveal) library
 
 == Credits ==
-
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
 This theme is based on Underscore WordPress theme by Theme Horse.
 
 The theme is released for free under the terms of the GNU General Public License version 2
 and some parts under their respective licenses.
+In general words, feel free and encouraged to use, modify and redistribute this theme however you like.
+You may remove any copyright references (unless required by third party components) and crediting is not necessary.
+The theme is offered free of charge. If someone asked money for it, someone just tricked you.
 
-**The exceptions to this license are as follows:**
+Unless otherwise specified, all the theme files, scripts and images are licensed under [GNU General Public License version 2](http://github.com/samuelguebo/bastille/LICENSE).
 
-- Zurb Foundation https://github.com/zurb/foundation-sites, for layout structure, under MIT License.
-- FontAwesome (https://github.com/FortAwesome/Font-Awesome), Fair Display (https://www.fontsquirrel.com/fonts/playfair-display), Roboto (https://fonts.google.com/specimen/Roboto), and Lora (https://www.fontsquirrel.com/fonts/lora) fonts,  under the SIL Open Font License.
-- ScrollReveal (https://github.com/jlmakes/scrollreveal), under MIT License.
-- CSS Content table and Header commenting style was borrowed from Arlene theme (https://github.com/samuelguebo/arlene).
+**The exceptions to this license and other credits are below:**
+
+- [Zurb Foundation](https://github.com/zurb/foundation-sites), for layout structure, under MIT License.
+- [FontAwesome](https://github.com/FortAwesome/Font-Awesome), [Fair Display](https://www.fontsquirrel.com/fonts/playfair-display), [Roboto](https://fonts.google.com/specimen/Roboto), and [Lora](https://www.fontsquirrel.com/fonts/lora) fonts,  under the SIL Open Font License.
+- [ScrollReveal](https://github.com/jlmakes/scrollreveal), under MIT License.
+- CSS Content table and Header commenting style was borrowed from [Arlene theme](https://github.com/samuelguebo/arlene)
+- Slider is built using [Slick](https://github.com/kenwheeler/slick/), a prodigious and dead-simple slider
+- Customizer option uses [Kirki](https://github.com/aristath/kirki), a toolkit expanding WordPress Customizer API features
 
