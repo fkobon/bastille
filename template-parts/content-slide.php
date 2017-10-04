@@ -16,7 +16,7 @@ Template part for displaying articles in the Slider loop
 
 <section class="post-item">
     <?php the_post_thumbnail( 'slider-cover' , array('class'=>'responsive delay')); ?>
-        <div class="large-6 small-10 medium-7 columns slider-caption post-item-caption">
+        <div class="large-7 medium-7 small-10  columns slider-caption post-item-caption">
             <div class="panel">
                 <span class="label category">
                     <?php $categories = get_the_category(); 

@@ -703,22 +703,22 @@ meta.foundation-mq-topbar {
 ================================================================================================
 */
 @media only screen and (max-width: 65em) {
-  .slider-wrapper {
-    min-height: 280px;
-    max-height: 280px;
+  .slider-wrapper, .slider-wrapper .post-item > img {
+    min-height: 320px !important;
+    max-height: 320px;
     overflow: hidden; } }
 @media only screen and (max-width: 35em) {
-  .slider-wrapper {
-    min-height: 200px;
-    max-height: 200px;
+  .slider-wrapper, .slider-wrapper .post-item > img {
+    min-height: 210px;
+    max-height: 210px;
     overflow: hidden; } }
 @media only screen and (max-width: 25em) {
-  .slider-wrapper {
+  .slider-wrapper, .slider-wrapper .post-item > img {
     min-height: 140px;
     max-height: 140px;
     overflow: hidden; } }
 @media only screen and (max-width: 20em) {
-  .slider-wrapper {
+  .slider-wrapper, .slider-wrapper .post-item > img {
     min-height: 120px;
     max-height: 120px;
     overflow: hidden; } }
@@ -742,7 +742,8 @@ meta.foundation-mq-topbar {
   width: 100%;
   border: 0;
   opacity: .5;
-  min-height: 100%; }
+  min-height: 450px;
+  object-fit: cover; }
 
 .slider-wrapper .slider-caption .label.category {
   background-color: #ff2323;
@@ -1678,10 +1679,7 @@ footer .breadcrumbs > *::before {
 ================================================================================================
 */
 @media only screen and (max-width: 37.5em) {
-  .slider-caption .post-item-title {
-    font-size: 1.4em; }
-
-  .slider-caption span.category {
+  .slider-wrapper .post-item-caption {
     display: none; }
 
   .main-row {
@@ -1802,9 +1800,6 @@ footer .breadcrumbs > *::before {
 22.0 - Media Queries (Mobile Small 30em (480px))
 ================================================================================================
 */
-@media only screen and (max-width: 30em) {
-  .slider-wrapper .slider-caption .post-item-date {
-    display: none; } }
 /*
 ================================================================================================
 23.0 - Media Queries (Mobile Small 20em (320px))
