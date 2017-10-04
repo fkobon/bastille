@@ -12,7 +12,7 @@ Template part for displaying articles in loop
 */
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="post-item">
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-item' ); ?>">
     <div class="post-item-caption">
         <?php if ( has_post_thumbnail() ):?>
             <div class="post-item-image"> 

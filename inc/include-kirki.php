@@ -88,7 +88,8 @@ if ( ! function_exists( 'kirki_installer_register' ) ) {
 			'capability' => 'install_plugins',
 			'priority'   => 0,
 		) ) );
-		$wp_customize->add_setting( 'kirki_installer_setting', array() );
+		$wp_customize->add_setting( 'kirki_installer_setting', array(
+			'sanitize_callback'	=> 'sanitize_text_field') );
 		$wp_customize->add_control( 'kirki_installer_control', array(
 			'section'    => 'kirki_installer',
 			'settings'   => 'kirki_installer_setting',
