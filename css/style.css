@@ -134,6 +134,9 @@ header div.slogan a:hover {
   top: 0;
   left: 0; }
 
+.single-cover .title.center span.vcard {
+  border: none; }
+
 .single-cover .title.center {
   text-align: center;
   font-family: "Playfair Display", "Georgia", sans-serif;
