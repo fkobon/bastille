@@ -494,7 +494,7 @@ if(!function_exists('bastille_custom_breadcrumbs')) {
 										<div class="author vcard">
 										<?php echo get_avatar( $comment, 100 ); ?>
 										<h6 class="author-name">
-												<a href="<?php comment_author_link(); ?>"><?php comment_author(); ?></a>
+												<?php comment_author_link(); ?>
 										</h6>
 										<?php comment_text(); ?>
 										<hr/>
